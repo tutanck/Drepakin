@@ -1,0 +1,18 @@
+{
+  "country": "",
+  "region": "",
+  "city": "",
+  "hospital": "",
+  "name": "",
+  "name_en": "",
+  "address": "",
+  "consultation_managers": [],
+  "phones": [],
+  "for_children": false,
+  "for_adults": false,
+  "genetic_advice": false,
+  "specialized_consultation": false,
+  "officially_designated_center": false,
+  "ern_member": false,
+  "website": null
+}
