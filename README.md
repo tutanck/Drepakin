@@ -50,7 +50,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ## Show your support
 
-Give it a ⭐️ !
+Give a ⭐️ to support this project !
 
 <a href="https://www.patreon.com/user?u=30635668&fan_landing=true">
   <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
