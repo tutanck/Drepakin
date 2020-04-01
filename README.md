@@ -13,6 +13,8 @@
 
 ### ✨ [drepakin.com](drepakin.com)
 
+### 💽 [Paired API](https://github.com/tutanck/DrepakinApi)
+
 ## Install
 
 ```sh
