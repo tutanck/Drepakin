@@ -49,7 +49,7 @@ export default function LegalNoticeDialog({ lang, open, onClose }) {
         {lang.legal_notice}
       </DialogTitle>
       <DialogContent dividers>
-        <Typography gutterBottom>
+        <Typography variant="body1" gutterBottom>
           TODO
           {[...new Array(50)]
             .map(
