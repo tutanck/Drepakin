@@ -34,7 +34,7 @@ import * as Sentry from '@sentry/browser';
 import 'jsoneditor-react/es/editor.min.css';
 import './App.css';
 
-if (!['development', 'test'].includes(process.env.NODE_ENV)) {
+if (['production', 'staging'].includes(process.env.NODE_ENV)) {
   Sentry.init({
     dsn: process.env.REACT_APP_SENTRY_DSN,
   });
