@@ -150,6 +150,7 @@ export default function StickyFooter({ lang, language }) {
 
       <LegalNoticeDialog
         lang={lang}
+        language={language}
         open={legalNoticeDialogOpened}
         onClose={() => setLegalNoticeDialogOpened(false)}
       />

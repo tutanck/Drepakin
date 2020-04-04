@@ -8,7 +8,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
-
+import legal_notice_fr_FR from '../../static/resources/legal/legal-fr-FR';
+import legal_notice_en_US from '../../static/resources/legal/legal-en-US';
 import {
   loadLegalNoticeStatus,
   storeLegalNoticeStatus,
@@ -21,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function LegalNoticeDialog({ lang, open, onClose }) {
+export default function LegalNoticeDialog({ lang, language, open, onClose }) {
   const classes = useStyles();
 
   const [noticeAccepted, setNoticeAccepted] = useState(loadLegalNoticeStatus());
@@ -50,15 +51,8 @@ export default function LegalNoticeDialog({ lang, open, onClose }) {
       </DialogTitle>
       <DialogContent dividers>
         <Typography variant="body1" gutterBottom>
-          TODO
-          {[...new Array(50)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
+          {language === 'fr_FR' && legal_notice_fr_FR}
+          {language === 'en_US' && legal_notice_en_US}
         </Typography>
       </DialogContent>
       <DialogActions>
@@ -81,4 +75,5 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
 }
 LegalNoticeDialog.propTypes = {
   lang: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired,
 };
