@@ -213,7 +213,7 @@ export default function StickyFooter({ lang, language }) {
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                href="mailto:drepakin@gmail.com?subject=Contact"
+                href="mailto:drepakin@gmail.com?subject=[Contact]"
               >
                 drepakin@gmail.com
               </a>
@@ -223,7 +223,7 @@ export default function StickyFooter({ lang, language }) {
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`mailto:drepakin@gmail.com&subject=[Problem]`}
+                href={`mailto:drepakin@gmail.com?subject=[Problem]`}
               >
                 {lang.report_problem}
               </a>
