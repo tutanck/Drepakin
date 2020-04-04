@@ -266,7 +266,7 @@ export default function StickyFooter({ lang, language }) {
           <div>
             <a
               className={clsx(classes.socialNetworkIcon, classes.facebook)}
-              href="https://web.whatsapp.com/"
+              href="https://www.facebook.com/hashtag/drepakin"
               target="_blank"
               rel="noopener noreferrer"
             >
