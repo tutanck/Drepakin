@@ -213,7 +213,7 @@ export default function StickyFooter({ lang, language }) {
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                href="mailto:drepakin@gmail.com?subject=Contact"
+                href="mailto:drepakin@gmail.com?subject=[Contact]"
               >
                 drepakin@gmail.com
               </a>
@@ -223,7 +223,7 @@ export default function StickyFooter({ lang, language }) {
                 className={classes.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`mailto:drepakin@gmail.com&subject=[Problem]`}
+                href={`mailto:drepakin@gmail.com?subject=[Problem]`}
               >
                 {lang.report_problem}
               </a>
@@ -266,7 +266,7 @@ export default function StickyFooter({ lang, language }) {
           <div>
             <a
               className={clsx(classes.socialNetworkIcon, classes.facebook)}
-              href="https://web.whatsapp.com/"
+              href="https://www.facebook.com/hashtag/drepakin"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -284,7 +284,7 @@ export default function StickyFooter({ lang, language }) {
 
             <a
               className={clsx(classes.socialNetworkIcon, classes.instagram)}
-              href="https://web.whatsapp.com/"
+              href="https://www.instagram.com/explore/tags/drepakin/"
               target="_blank"
               rel="noopener noreferrer"
             >

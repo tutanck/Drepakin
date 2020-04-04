@@ -34,10 +34,17 @@ import * as Sentry from '@sentry/browser';
 import 'jsoneditor-react/es/editor.min.css';
 import './App.css';
 
-if (process.env.REACT_APP_ENV === 'production') {
+if (['production', 'staging'].includes(process.env.NODE_ENV)) {
   Sentry.init({
     dsn: process.env.REACT_APP_SENTRY_DSN,
   });
+
+  console.log('====================================');
+  console.log(
+    '------------------------------------------> SENTRY:',
+    process.env.REACT_APP_SENTRY_DSN,
+  );
+  console.log('====================================');
 }
 
 const useStyles = makeStyles(theme => ({
