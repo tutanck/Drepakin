@@ -284,7 +284,7 @@ export default function StickyFooter({ lang, language }) {
 
             <a
               className={clsx(classes.socialNetworkIcon, classes.instagram)}
-              href="https://web.whatsapp.com/"
+              href="https://www.instagram.com/explore/tags/drepakin/"
               target="_blank"
               rel="noopener noreferrer"
             >
