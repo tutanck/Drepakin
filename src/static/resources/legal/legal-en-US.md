@@ -63,7 +63,8 @@ When you provide us with your data in order to be contacted by our services, it 
 
 ## Your rights
 
-You have the right to access data concerning you or can request its erasure. You also have a right of opposition for legitimate reasons, a right of rectification, portability and a right to limit the processing of your data (cf. [cnil.fr](cnil.fr) for more information on your rights).
+You have the right to access data concerning you or can request its erasure.
+You also have a right of opposition for legitimate reasons, a right of rectification, portability and a right to limit the processing of your data (cf. [privacyshield.gov](https://www.privacyshield.gov/) for more information on your rights).
 To exercise these rights or if you have any questions about the processing of your data, you can contact our Data Protection Officer (DPO):
 
 - By email: drepakin@gmail.com](mailto:drepakin@gmail.com?subject=[DPO/RGPD]&cc=tutanck@gmail.com)

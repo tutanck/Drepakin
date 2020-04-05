@@ -64,7 +64,7 @@ Lorsque vous nous fournissez vos données afin d’être recontacté par nos ser
 
 ## Vos droits
 
-Vous disposez d’un droit d’accès aux données vous concernant ou pouvez demander leur effacement. Vous disposez également d’un droit d’opposition pour motif légitime, d’un droit de rectification, de portabilité et d’un droit à la limitation du traitement de vos données (cf. [cnil.fr](cnil.fr) pour plus d’informations sur vos droits).
+Vous disposez d’un droit d’accès aux données vous concernant ou pouvez demander leur effacement. Vous disposez également d’un droit d’opposition pour motif légitime, d’un droit de rectification, de portabilité et d’un droit à la limitation du traitement de vos données (cf. [cnil.fr](https://cnil.fr) pour plus d’informations sur vos droits).
 Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter notre Délégué à la protection des données (DPO) :
 
 - Par email : [drepakin@gmail.com](mailto:drepakin@gmail.com?subject=[DPO/RGPD]&cc=tutanck@gmail.com)
