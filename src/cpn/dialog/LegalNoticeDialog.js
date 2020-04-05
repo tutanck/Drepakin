@@ -8,10 +8,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import { blue } from '@material-ui/core/colors';
 import legal_notice_fr_FR from '../../static/resources/legal/legal-fr-FR.md';
 import legal_notice_en_US from '../../static/resources/legal/legal-en-US.md';
-import {
-  loadLegalNoticeStatus,
-  storeLegalNoticeStatus,
-} from '../../utils/legal-notice';
 const ReactMarkdown = require('react-markdown');
 
 const useStyles = makeStyles(theme => ({
@@ -24,8 +20,6 @@ const useStyles = makeStyles(theme => ({
 export default function LegalNoticeDialog({ lang, language, open, onClose }) {
   const classes = useStyles();
 
-  const [noticeAccepted, setNoticeAccepted] = useState(loadLegalNoticeStatus());
-
   const [content, setContent] = useState();
 
   const [dialogTop, setDialogTop] = useState(null);
@@ -34,37 +28,23 @@ export default function LegalNoticeDialog({ lang, language, open, onClose }) {
     dialogTop.scrollIntoView();
   }
 
-  const handleAgree = () => {
-    storeLegalNoticeStatus();
-    setNoticeAccepted(loadLegalNoticeStatus());
-  };
-
   fetch(language === 'fr_FR' ? legal_notice_fr_FR : legal_notice_en_US)
     .then(response => response.text())
     .then(setContent);
 
-  const shouldBeOpen = !noticeAccepted || (noticeAccepted && open);
-
   return (
-    <Dialog open={shouldBeOpen} onClose={onClose} scroll={'body'}>
-      <span id="legal-notice-dialog-top" ref={el => setDialogTop(el)}></span>
-      <DialogContent dividers>
+    <Dialog open={open} onClose={onClose} scroll={'body'}>
+      <DialogContent
+        dividers
+        ref={el => setDialogTop(el)}
+        id="legal-notice-dialog-content-top"
+      >
         <ReactMarkdown source={content} />
       </DialogContent>
       <DialogActions>
-        {noticeAccepted ? (
-          <Button autoFocus onClick={onClose} className={classes.closeButton}>
-            {lang.close}
-          </Button>
-        ) : (
-          <Button
-            autoFocus
-            onClick={handleAgree}
-            className={classes.closeButton}
-          >
-            {lang.i_accept_notice}
-          </Button>
-        )}
+        <Button autoFocus onClick={onClose} className={classes.closeButton}>
+          {lang.close}
+        </Button>
       </DialogActions>
     </Dialog>
   );
