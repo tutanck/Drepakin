@@ -29,7 +29,7 @@ Ce site utilise différents types de cookies. Certains cookies sont placés par 
 À tout moment, vous pouvez modifier ou retirer votre consentement dès la Déclaration relative aux cookies sur notre site Web.
 En savoir plus sur qui nous sommes, comment vous pouvez nous contacter et comment nous traitons les données personnelles veuillez voir notre Politique confidentialité.
 
-Déclaration relative aux cookies mise à jour le 02/04/2020 par Cookiebot:
+Déclaration relative aux cookies mise à jour le 02/04/2020 par [Cookiebot](https://www.cookiebot.com/):
 
 ```
 Catégorie: Nécessaires (1)
