@@ -1,21 +1,22 @@
 # Mentions Légales
 
-Créée en 2020, le site internet **drepakin.com** a pour but d’aider les patients drépanocytaires à retrouver les centres de proximité spécialistes de la drépanocytose et ce partout dans le monde.
+Créé en 2020, le site internet **drepakin.com** a pour but d’aider les patients drépanocytaires à retrouver les centres de proximité spécialistes de la drépanocytose et ce partout dans le monde.
 
 Directeur de publication :
+
 Hébergement :
 
 > `Netlify, Inc., situé au 2325 3rd Street, bureau 215, San Francisco, Californie, 94107.`
 
 ## Propriété Intellectuelle
 
-La structure générale, les textes, images animées ou non, les savoir-faire, les programmes et logiciels ainsi que tout autre élément composant ce site sont la propriété exclusive de **drepakin.com** et sont protégés par le droit d’auteur. Toute représentation totale ou partielle de ce site, par quelque procédé que ce soit, sans l’autorisation expresse de **drepakin.com** est donc interdite et constituerait une contrefaçon. Il en est de même des bases de données figurant le site drepakin.com.
+La structure générale, les textes, images animées ou non, les savoir-faire, les programmes et logiciels ainsi que tout autre élément composant ce site sont la propriété exclusive de **drepakin.com** et sont protégés par le droit d’auteur. Toute représentation totale ou partielle de ce site, par quelque procédé que ce soit, sans l’autorisation expresse de **drepakin.com** est donc interdite et constituerait une contrefaçon. Il en est de même des bases de données figurant le site [drepakin.com].
 Toute reproduction totale ou partielle des marques ou logos, effectuée à partir des éléments du site et sans l’autorisation de **drepakin.com** est donc prohibée.
 
 ## Conditions d’utilisation
 
-Tout lien avec ce site doit faire l’objet d’une autorisation préalable écrite de **drepakin.com** et ne pourra être réalisé que vers l’adresse de la page d’accueil du site www.drepakin.com avec l’intégration d’un logo.
-Malgré les soins apportés par drepakin.com, les informations contenues dans ce site sont données à titre indicatif et sont sujettes à changement sans préavis. En conséquence, l’utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.
+Tout lien avec ce site doit faire l’objet d’une autorisation préalable écrite de **drepakin.com** et ne pourra être réalisé que vers l’adresse de la page d’accueil du site [www.drepakin.com] avec l’intégration d’un logo.
+Malgré les soins apportés par **drepakin.com**, les informations contenues dans ce site sont données à titre indicatif et sont sujettes à changement sans préavis. En conséquence, l’utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.
 Il accepte les présentes conditions d’utilisation.
 Le site **drepakin.com** ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
 
@@ -33,7 +34,8 @@ Déclaration relative aux cookies mise à jour le 26/06/2019 par Cookiebot:
 ```
 Catégorie: Nécessaires (1)
 
-Les cookies nécessaires contribuent à rendre un site Web utilisable en activant des fonctions de base comme la navigation de page et l'accès aux zones sécurisées du site Web. Le site Web ne peut pas fonctionner correctement sans ces cookies.
+Les cookies nécessaires contribuent à rendre un site Web utilisable en activant des fonctions de base comme la navigation de page et l'accès aux zones sécurisées du site Web.
+Le site Web ne peut pas fonctionner correctement sans ces cookies.
 
 
 Nom du cookie: CookieConsent
@@ -46,7 +48,8 @@ Expiration: 1 année
 
 Première URL trouvée: https://drepakin.com/
 
-Description de la finalité des cookies: Stocke l'autorisation d'utilisation de cookies pour le domaine actuel par l'utilisateur.
+Description de la finalité des cookies:
+Stocke l'autorisation d'utilisation de cookies pour le domaine actuel par l'utilisateur.
 
 Initiateur: Serveur web
 
@@ -64,7 +67,7 @@ Lorsque vous nous fournissez vos données afin d’être recontacté par nos ser
 Vous disposez d’un droit d’accès aux données vous concernant ou pouvez demander leur effacement. Vous disposez également d’un droit d’opposition pour motif légitime, d’un droit de rectification, de portabilité et d’un droit à la limitation du traitement de vos données (cf. cnil.fr pour plus d’informations sur vos droits).
 Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter notre Délégué à la protection des données (DPO) :
 
-- Par email : drepakin@gmail.com
+- Par email : [drepakin@gmail.com](mailto:drepakin@gmail.com?subject=[DPO/RGPD]&cc=tutanck@gmail.com)
 
 Lorsque vous exercez vos droits, vous devrez nous fournir une preuve de votre identité. A défaut nous ne serons pas en mesure de traiter votre demande et nous nous réservons le droit de ne pas faire droit à votre demande.
 Si vous estimez après nous avoir contactés que vos droits ne sont pas respectés, vous pourrez à tout moment saisir l’autorité de contrôle.
@@ -72,3 +75,6 @@ Si vous estimez après nous avoir contactés que vos droits ne sont pas respect�
 ## Sécurité
 
 Notre préoccupation est de préserver la qualité et l’intégrité de vos données personnelles. Les technologies ainsi que les politiques de sécurité appliquées par nous-mêmes et nos prestataires techniques permettent de protéger vos données contre tout accès non autorisé, toute altération, toute destruction malveillante ou accidentelle et toute perte involontaire de données. Nous améliorons sans cesse nos procédures de sécurité au fur et à mesure de l’évolution des technologies afin de maintenir un niveau de protection maximum. Nos agents et le personnel de nos sous-traitants ayant accès aux données personnelles sont soumis contractuellement à une obligation de confidentialité.
+
+[drepakin.com]: https://www.drepakin.com
+[www.drepakin.com]: https://www.drepakin.com
