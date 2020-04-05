@@ -127,7 +127,7 @@ export default function AboutDialog({ lang, language, open, onClose }) {
               className={classes.secondaryLink}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://google.com?q=site soutenir cause"
+              href="https://paypal.me/pools/c/8nXuBPoX1L"
             >
               {lang.support}.
             </a>
