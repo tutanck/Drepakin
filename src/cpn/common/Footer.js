@@ -247,7 +247,7 @@ export default function StickyFooter({ lang, language }) {
                 {lang.legal_notice}
               </Button>
             </li>
-            <li>
+            {/* <li>
               <Button
                 className={clsx(classes.link, classes.normalLink)}
                 onClick={noOp}
@@ -258,7 +258,7 @@ export default function StickyFooter({ lang, language }) {
               >
                 {lang.cookies_management}
               </Button>
-            </li>
+            </li> */}
           </ul>
         </Grid>
 
