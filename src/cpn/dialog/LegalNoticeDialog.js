@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
-import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
-
-import {
-  loadLegalNoticeStatus,
-  storeLegalNoticeStatus,
-} from '../../utils/legal-notice';
+import legal_notice_fr_FR from '../../static/resources/legal/legal-fr-FR.md';
+import legal_notice_en_US from '../../static/resources/legal/legal-en-US.md';
+const ReactMarkdown = require('react-markdown');
 
 const useStyles = makeStyles(theme => ({
   closeButton: {
@@ -21,64 +17,39 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function LegalNoticeDialog({ lang, open, onClose }) {
+export default function LegalNoticeDialog({ lang, language, open, onClose }) {
   const classes = useStyles();
 
-  const [noticeAccepted, setNoticeAccepted] = useState(loadLegalNoticeStatus());
+  const [content, setContent] = useState();
 
-  const [centersGrid, setCentersGrid] = useState(null);
+  const [dialogTop, setDialogTop] = useState(null);
 
-  if (centersGrid) {
-    centersGrid.scrollIntoView();
+  if (dialogTop) {
+    dialogTop.scrollIntoView();
   }
 
-  const handleAgree = () => {
-    storeLegalNoticeStatus();
-    setNoticeAccepted(loadLegalNoticeStatus());
-  };
-
-  const shouldBeOpen = !noticeAccepted || (noticeAccepted && open);
+  fetch(language === 'fr_FR' ? legal_notice_fr_FR : legal_notice_en_US)
+    .then(response => response.text())
+    .then(setContent);
 
   return (
-    <Dialog open={shouldBeOpen} onClose={onClose} scroll={'body'}>
-      <DialogTitle
-        id="customized-dialog-title"
-        onClose={onClose}
-        ref={el => setCentersGrid(el)}
+    <Dialog open={open} onClose={onClose} scroll={'body'}>
+      <DialogContent
+        dividers
+        ref={el => setDialogTop(el)}
+        id="legal-notice-dialog-content-top"
       >
-        {lang.legal_notice}
-      </DialogTitle>
-      <DialogContent dividers>
-        <Typography variant="body1" gutterBottom>
-          TODO
-          {[...new Array(50)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
-        </Typography>
+        <ReactMarkdown source={content} />
       </DialogContent>
       <DialogActions>
-        {noticeAccepted ? (
-          <Button autoFocus onClick={onClose} className={classes.closeButton}>
-            {lang.close}
-          </Button>
-        ) : (
-          <Button
-            autoFocus
-            onClick={handleAgree}
-            className={classes.closeButton}
-          >
-            {lang.i_accept_notice}
-          </Button>
-        )}
+        <Button autoFocus onClick={onClose} className={classes.closeButton}>
+          {lang.close}
+        </Button>
       </DialogActions>
     </Dialog>
   );
 }
 LegalNoticeDialog.propTypes = {
   lang: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired,
 };

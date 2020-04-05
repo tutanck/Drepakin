@@ -46,6 +46,10 @@ export default function DisclaimerDialog({ lang }) {
           {lang.be_extra_careful_on_go}
           <br />
           <b>{lang.decline_responsibility}</b>
+          <br />
+          <small>
+            <i>{lang.see_legal_notices}</i>
+          </small>
         </DialogContentText>
       </DialogContent>
       <DialogActions>
