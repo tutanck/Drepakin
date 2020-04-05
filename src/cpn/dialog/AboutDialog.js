@@ -138,7 +138,7 @@ export default function AboutDialog({ lang, language, open, onClose }) {
               className={classes.secondaryLink}
               target="_blank"
               rel="noopener noreferrer"
-              href={`mailto:drepakin@gmail.com&subject=[${lang.problem} | Bug | Incohérence]`}
+              href={`mailto:drepakin@gmail.com?subject=[${lang.problem} | Bug | ${lang.inaccuracy}]`}
             >
               {lang.let_us_know}
             </a>
@@ -149,7 +149,7 @@ export default function AboutDialog({ lang, language, open, onClose }) {
               className={classes.secondaryLink}
               target="_blank"
               rel="noopener noreferrer"
-              href={`mailto:drepakin@gmail.com&subject=[Suggestions / ${lang.ideas}]`}
+              href={`mailto:drepakin@gmail.com?subject=[Suggestions / ${lang.ideas}]`}
             >
               {lang.write_us}
             </a>

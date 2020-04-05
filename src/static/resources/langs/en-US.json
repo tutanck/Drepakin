@@ -127,5 +127,7 @@
   "try_later": "Please, try later",
   "no_results": "No results found",
   "no_network": "You are not connected !",
-  "retry": "Retry"
+  "retry": "Retry",
+  "contribute_to_dev": "\\ contribute --dev",
+  "inaccuracy": "Inaccuracy"
 }

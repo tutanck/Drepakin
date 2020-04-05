@@ -12,11 +12,12 @@ import {
   faFacebook,
   faInstagram,
   faWhatsappSquare,
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
+import Z from '../../static/assets/Z.png';
 import AboutDialog from '../dialog/AboutDialog';
 import LegalNoticeDialog from '../dialog/LegalNoticeDialog';
 import DisclaimerDialog from '../dialog/DisclaimerDialog';
-import { noOp } from '../../utils/toolbox';
 import googleForms from '../../utils/google-form-selector';
 
 const useStyles = makeStyles(theme => ({
@@ -202,6 +203,17 @@ export default function StickyFooter({ lang, language }) {
                   {lang.support_us}
                 </a>
               </li>
+              <li>
+                <a
+                  className={classes.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/tutanck/Drepakin"
+                >
+                  {lang.contribute_to_dev}{' '}
+                  <FontAwesomeIcon size="1x" icon={faGithub} />
+                </a>
+              </li>
             </ul>
           </div>
         </Grid>
@@ -247,7 +259,7 @@ export default function StickyFooter({ lang, language }) {
                 {lang.legal_notice}
               </Button>
             </li>
-            <li>
+            {/* <li>
               <Button
                 className={clsx(classes.link, classes.normalLink)}
                 onClick={noOp}
@@ -258,7 +270,7 @@ export default function StickyFooter({ lang, language }) {
               >
                 {lang.cookies_management}
               </Button>
-            </li>
+            </li> */}
           </ul>
         </Grid>
 
@@ -302,7 +314,9 @@ export default function StickyFooter({ lang, language }) {
           className={clsx(classes.block, classes.sponsorsBlock)}
         >
           <div className={classes.blockTitle}>{lang.special_thanks}</div>
-          <div className={classes.sponsorsContent}></div>
+          <div className={classes.sponsorsContent}>
+            <img src={Z} className={classes.imgIcon} alt={'Z'} />
+          </div>
         </Grid>
       </Grid>
 

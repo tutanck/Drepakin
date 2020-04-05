@@ -160,6 +160,9 @@ const useStyles = makeStyles(theme => ({
   spaceRight: {
     marginRight: 8,
   },
+  breakWord: {
+    wordBreak: 'break-all',
+  },
 }));
 
 export default function CenterCard({ user, lang, center, onServerCallError }) {
@@ -615,7 +618,11 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
           <Typography paragraph>
             <b>{lang.website} : </b>
             <br />
-            <Link target="_blank" href={website} className={classes.link}>
+            <Link
+              target="_blank"
+              href={website}
+              className={clsx(classes.link, classes.breakWord)}
+            >
               {website}
             </Link>
           </Typography>
