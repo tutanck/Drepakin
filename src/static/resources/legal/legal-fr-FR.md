@@ -29,7 +29,7 @@ Ce site utilise différents types de cookies. Certains cookies sont placés par 
 À tout moment, vous pouvez modifier ou retirer votre consentement dès la Déclaration relative aux cookies sur notre site Web.
 En savoir plus sur qui nous sommes, comment vous pouvez nous contacter et comment nous traitons les données personnelles veuillez voir notre Politique confidentialité.
 
-Déclaration relative aux cookies mise à jour le 26/06/2019 par Cookiebot:
+Déclaration relative aux cookies mise à jour le 02/04/2020 par Cookiebot:
 
 ```
 Catégorie: Nécessaires (1)
@@ -64,7 +64,7 @@ Lorsque vous nous fournissez vos données afin d’être recontacté par nos ser
 
 ## Vos droits
 
-Vous disposez d’un droit d’accès aux données vous concernant ou pouvez demander leur effacement. Vous disposez également d’un droit d’opposition pour motif légitime, d’un droit de rectification, de portabilité et d’un droit à la limitation du traitement de vos données (cf. cnil.fr pour plus d’informations sur vos droits).
+Vous disposez d’un droit d’accès aux données vous concernant ou pouvez demander leur effacement. Vous disposez également d’un droit d’opposition pour motif légitime, d’un droit de rectification, de portabilité et d’un droit à la limitation du traitement de vos données (cf. [cnil.fr](cnil.fr) pour plus d’informations sur vos droits).
 Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter notre Délégué à la protection des données (DPO) :
 
 - Par email : [drepakin@gmail.com](mailto:drepakin@gmail.com?subject=[DPO/RGPD]&cc=tutanck@gmail.com)

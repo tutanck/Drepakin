@@ -1,75 +1,79 @@
-# Mentions Légales
+# Legal Notice
 
-Créée en 2020, le site internet **drepakin.com** a pour but d’aider les patients drépanocytaires à retrouver les centres de proximité spécialistes de la drépanocytose et ce partout dans le monde.
+Created in 2020, the website **drepakin.com** aims to help sickle cell patients find local sickle cell specialist centers around the world.
 
-Directeur de publication :
-Hébergement :
+Publication director :
 
-> `Netlify, Inc., situé au 2325 3rd Street, bureau 215, San Francisco, Californie, 94107.`
+Accommodation:
 
-## Propriété Intellectuelle
+> `Netlify, Inc., located at 2325 3rd Street, Suite 215, San Francisco, California, 94107.`
 
-La structure générale, les textes, images animées ou non, les savoir-faire, les programmes et logiciels ainsi que tout autre élément composant ce site sont la propriété exclusive de **drepakin.com** et sont protégés par le droit d’auteur. Toute représentation totale ou partielle de ce site, par quelque procédé que ce soit, sans l’autorisation expresse de **drepakin.com** est donc interdite et constituerait une contrefaçon. Il en est de même des bases de données figurant le site drepakin.com.
-Toute reproduction totale ou partielle des marques ou logos, effectuée à partir des éléments du site et sans l’autorisation de **drepakin.com** est donc prohibée.
+## Intellectual property
 
-## Conditions d’utilisation
+The general structure, the texts, images animated or not, the know-how, the programs and software as well as any other element composing this site are the exclusive property of **drepakin.com** and are protected by copyright. Any total or partial representation of this site, by any process whatsoever, without the express authorization of **drepakin.com** is therefore prohibited and would constitute an infringement. The same applies to the databases appearing on the site [drepakin.com].
+Any total or partial reproduction of brands or logos, made from elements of the site and without the authorization of **drepakin.com** is therefore prohibited.
 
-Tout lien avec ce site doit faire l’objet d’une autorisation préalable écrite de **drepakin.com** et ne pourra être réalisé que vers l’adresse de la page d’accueil du site www.drepakin.com avec l’intégration d’un logo.
-Malgré les soins apportés par drepakin.com, les informations contenues dans ce site sont données à titre indicatif et sont sujettes à changement sans préavis. En conséquence, l’utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.
-Il accepte les présentes conditions d’utilisation.
-Le site **drepakin.com** ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+## Terms of use
+
+Any link to this site must be subject to prior written authorization from **drepakin.com** and can only be made to the address of the home page of the site [www.drepakin.com] with integration of a logo.
+Despite the care taken by **drepakin.com**, the information contained on this site is given for information only and is subject to change without notice. Consequently, the user acknowledges using this information under his exclusive responsibility.
+It accepts these terms of use.
+The **drepakin.com** site cannot be held responsible for omissions, inaccuracies and deficiencies in the update, whether they be caused by it or by third party partners who provide it with this information.
 
 ## Cookies
 
-Ce site Web utilise des cookies. Les cookies nous permettent de personnaliser le contenu et les annonces, d'offrir des fonctionnalités relatives aux médias sociaux et d'analyser notre trafic. Nous partageons également des informations sur l'utilisation de notre site avec nos partenaires de médias sociaux, de publicité et d'analyse, qui peuvent combiner celles-ci avec d'autres informations que vous leur avez fournies ou qu'ils ont collectées lors de votre utilisation de leurs services. Vous consentez à nos cookies si vous continuez à utiliser notre site Web.
-Les cookies sont des petits fichiers textes qui peuvent être utilisés par les sites Web pour rendre l'expérience utilisateur plus efficace.
-La loi stipule que nous ne pouvons stocker des cookies sur votre appareil que s’ils sont strictement nécessaires au fonctionnement de ce site. Pour tous les autres types de cookies, nous avons besoin de votre permission.
-Ce site utilise différents types de cookies. Certains cookies sont placés par les services tiers qui apparaissent sur nos pages.
-À tout moment, vous pouvez modifier ou retirer votre consentement dès la Déclaration relative aux cookies sur notre site Web.
-En savoir plus sur qui nous sommes, comment vous pouvez nous contacter et comment nous traitons les données personnelles veuillez voir notre Politique confidentialité.
+This website uses cookies. Cookies allow us to personalize content and ads, provide social media functionality and analyze our traffic. We also share information about the use of our site with our social media, advertising and analytics partners, who may combine this with other information that you have provided to them or that they have collected during your use of their services. You consent to our cookies if you continue to use our website.
+Cookies are small text files that can be used by websites to make the user experience more efficient.
+The law states that we can only store cookies on your device if they are strictly necessary for the operation of this site. For all other types of cookies, we need your permission.
+This site uses different types of cookies. Some cookies are placed by third-party services that appear on our pages.
+You can change or withdraw your consent at any time from the Cookie Statement on our website.
+To find out more about who we are, how you can contact us and how we process personal data please see our Privacy Policy.
 
-Déclaration relative aux cookies mise à jour le 26/06/2019 par Cookiebot:
+Cookie declaration updated on 04/02/2020 by Cookiebot:
 
 ```
-Catégorie: Nécessaires (1)
+Category: Necessary (1)
 
-Les cookies nécessaires contribuent à rendre un site Web utilisable en activant des fonctions de base comme la navigation de page et l'accès aux zones sécurisées du site Web. Le site Web ne peut pas fonctionner correctement sans ces cookies.
+Necessary cookies help make a website usable by activating basic functions such as page navigation and access to secure areas of the website.
+The website cannot function properly without these cookies.
 
+Cookie name: CookieConsent
 
-Nom du cookie: CookieConsent
-
-Fournisseur:drepakin.com
+Supplier: drepakin.com
 
 Type: HTTP
 
-Expiration: 1 année
+Expiration: 1 year
 
-Première URL trouvée: https://drepakin.com/
+First URL found: https://drepakin.com/
 
-Description de la finalité des cookies: Stocke l'autorisation d'utilisation de cookies pour le domaine actuel par l'utilisateur.
+Description of the purpose of cookies:
+Stores the authorization to use cookies for the current domain by the user.
 
-Initiateur: Serveur web
+Initiator: Web server
 
 Source: drepakin.com
 
-Données envoyées à: États-Unis (adéquat)
+Data sent to: United States (adequate)
 ```
 
-## Transmission des données
+## Data transmission
 
-Lorsque vous nous fournissez vos données afin d’être recontacté par nos services, celles-ci sont traitées uniquement par les membres et agents internes et habilités de **drepakin.com** et ne font l’objet d’aucune transmission à des tiers extérieurs.
+When you provide us with your data in order to be contacted by our services, it is processed only by internal and authorized members and agents of **drepakin.com** and is not transmitted to external third parties.
 
-## Vos droits
+## Your rights
 
-Vous disposez d’un droit d’accès aux données vous concernant ou pouvez demander leur effacement. Vous disposez également d’un droit d’opposition pour motif légitime, d’un droit de rectification, de portabilité et d’un droit à la limitation du traitement de vos données (cf. cnil.fr pour plus d’informations sur vos droits).
-Pour exercer ces droits ou pour toute question sur le traitement de vos données, vous pouvez contacter notre Délégué à la protection des données (DPO) :
+You have the right to access data concerning you or can request its erasure. You also have a right of opposition for legitimate reasons, a right of rectification, portability and a right to limit the processing of your data (cf. [cnil.fr](cnil.fr) for more information on your rights).
+To exercise these rights or if you have any questions about the processing of your data, you can contact our Data Protection Officer (DPO):
 
-- Par email : drepakin@gmail.com
+- By email: drepakin@gmail.com](mailto:drepakin@gmail.com?subject=[DPO/RGPD]&cc=tutanck@gmail.com)
 
-Lorsque vous exercez vos droits, vous devrez nous fournir une preuve de votre identité. A défaut nous ne serons pas en mesure de traiter votre demande et nous nous réservons le droit de ne pas faire droit à votre demande.
-Si vous estimez après nous avoir contactés que vos droits ne sont pas respectés, vous pourrez à tout moment saisir l’autorité de contrôle.
+When you exercise your rights, you will need to provide us with proof of your identity. Otherwise we will not be able to process your request and we reserve the right not to grant your request.
+If you believe after contacting us that your rights are not respected, you can at any time appeal to the supervisory authority.
 
-## Sécurité
+## Security
 
-Notre préoccupation est de préserver la qualité et l’intégrité de vos données personnelles. Les technologies ainsi que les politiques de sécurité appliquées par nous-mêmes et nos prestataires techniques permettent de protéger vos données contre tout accès non autorisé, toute altération, toute destruction malveillante ou accidentelle et toute perte involontaire de données. Nous améliorons sans cesse nos procédures de sécurité au fur et à mesure de l’évolution des technologies afin de maintenir un niveau de protection maximum. 
-Nos agents et le personnel de nos sous-traitants ayant accès aux données personnelles sont soumis contractuellement à une obligation de confidentialité.
+Our concern is to preserve the quality and integrity of your personal data. The technologies as well as the security policies applied by us and our technical service providers make it possible to protect your data against any unauthorized access, any alteration, any malicious or accidental destruction and any involuntary loss of data. We are constantly improving our security procedures as technologies evolve in order to maintain a maximum level of protection. Our agents and the staff of our subcontractors having access to personal data are contractually bound by an obligation of confidentiality.
+
+[drepakin.com]: https://www.drepakin.com
+[www.drepakin.com]: https://www.drepakin.com
