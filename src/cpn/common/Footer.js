@@ -197,7 +197,7 @@ export default function StickyFooter({ lang, language }) {
                   className={classes.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  href=" "
+                  href="https://paypal.me/pools/c/8nXuBPoX1L"
                 >
                   {lang.support_us}
                 </a>
