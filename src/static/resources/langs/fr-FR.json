@@ -128,5 +128,6 @@
   "no_results": "Pas de résultats",
   "no_network": "Vous n'êtes pas connecté !",
   "retry": "Réessayer",
-  "contribute_to_dev": "\\ contribuer --dev"
+  "contribute_to_dev": "\\ contribuer --dev",
+  "inaccuracy": "Inexactitude"
 }

@@ -128,5 +128,6 @@
   "no_results": "No results found",
   "no_network": "You are not connected !",
   "retry": "Retry",
-  "contribute_to_dev": "\\ contribute --dev"
+  "contribute_to_dev": "\\ contribute --dev",
+  "inaccuracy": "Inaccuracy"
 }
