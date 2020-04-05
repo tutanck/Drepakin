@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
-import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
-import legal_notice_fr_FR from '../../static/resources/legal/legal-fr-FR';
-import legal_notice_en_US from '../../static/resources/legal/legal-en-US';
+import legal_notice_fr_FR from '../../static/resources/legal/legal-fr-FR.md';
+import legal_notice_en_US from '../../static/resources/legal/legal-en-US.md';
 import {
   loadLegalNoticeStatus,
   storeLegalNoticeStatus,
 } from '../../utils/legal-notice';
+const ReactMarkdown = require('react-markdown');
 
 const useStyles = makeStyles(theme => ({
   closeButton: {
@@ -27,10 +26,12 @@ export default function LegalNoticeDialog({ lang, language, open, onClose }) {
 
   const [noticeAccepted, setNoticeAccepted] = useState(loadLegalNoticeStatus());
 
-  const [centersGrid, setCentersGrid] = useState(null);
+  const [content, setContent] = useState();
 
-  if (centersGrid) {
-    centersGrid.scrollIntoView();
+  const [dialogTop, setDialogTop] = useState(null);
+
+  if (dialogTop) {
+    dialogTop.scrollIntoView();
   }
 
   const handleAgree = () => {
@@ -38,22 +39,17 @@ export default function LegalNoticeDialog({ lang, language, open, onClose }) {
     setNoticeAccepted(loadLegalNoticeStatus());
   };
 
+  fetch(language === 'fr_FR' ? legal_notice_fr_FR : legal_notice_en_US)
+    .then(response => response.text())
+    .then(setContent);
+
   const shouldBeOpen = !noticeAccepted || (noticeAccepted && open);
 
   return (
     <Dialog open={shouldBeOpen} onClose={onClose} scroll={'body'}>
-      <DialogTitle
-        id="customized-dialog-title"
-        onClose={onClose}
-        ref={el => setCentersGrid(el)}
-      >
-        {lang.legal_notice}
-      </DialogTitle>
+      <span id="legal-notice-dialog-top" ref={el => setDialogTop(el)}></span>
       <DialogContent dividers>
-        <Typography variant="body1" gutterBottom>
-          {language === 'fr_FR' && legal_notice_fr_FR}
-          {language === 'en_US' && legal_notice_en_US}
-        </Typography>
+        <ReactMarkdown source={content} />
       </DialogContent>
       <DialogActions>
         {noticeAccepted ? (
