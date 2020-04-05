@@ -13,13 +13,11 @@ import {
   faInstagram,
   faWhatsappSquare,
   faGithub,
-  faGithubAlt,
-  faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
+import Z from '../../static/assets/Z.png';
 import AboutDialog from '../dialog/AboutDialog';
 import LegalNoticeDialog from '../dialog/LegalNoticeDialog';
 import DisclaimerDialog from '../dialog/DisclaimerDialog';
-import { noOp } from '../../utils/toolbox';
 import googleForms from '../../utils/google-form-selector';
 
 const useStyles = makeStyles(theme => ({
@@ -316,7 +314,9 @@ export default function StickyFooter({ lang, language }) {
           className={clsx(classes.block, classes.sponsorsBlock)}
         >
           <div className={classes.blockTitle}>{lang.special_thanks}</div>
-          <div className={classes.sponsorsContent}></div>
+          <div className={classes.sponsorsContent}>
+            <img src={Z} className={classes.imgIcon} alt={'Z'} />
+          </div>
         </Grid>
       </Grid>
 
