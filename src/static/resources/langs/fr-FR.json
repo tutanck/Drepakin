@@ -127,5 +127,6 @@
   "try_later": "Veuillez ré-essayer plus tard",
   "no_results": "Pas de résultats",
   "no_network": "Vous n'êtes pas connecté !",
-  "retry": "Réessayer"
+  "retry": "Réessayer",
+  "contribute_to_dev": "\\ contribuer --dev"
 }

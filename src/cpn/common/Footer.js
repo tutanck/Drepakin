@@ -12,6 +12,9 @@ import {
   faFacebook,
   faInstagram,
   faWhatsappSquare,
+  faGithub,
+  faGithubAlt,
+  faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import AboutDialog from '../dialog/AboutDialog';
 import LegalNoticeDialog from '../dialog/LegalNoticeDialog';
@@ -200,6 +203,17 @@ export default function StickyFooter({ lang, language }) {
                   href="https://paypal.me/pools/c/8nXuBPoX1L"
                 >
                   {lang.support_us}
+                </a>
+              </li>
+              <li>
+                <a
+                  className={classes.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/tutanck/Drepakin"
+                >
+                  {lang.contribute_to_dev}{' '}
+                  <FontAwesomeIcon size="1x" icon={faGithub} />
                 </a>
               </li>
             </ul>
