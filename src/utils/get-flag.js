@@ -9,6 +9,7 @@ import EE from '../static/assets/flags/EE.png';
 import ES from '../static/assets/flags/ES.png';
 import FI from '../static/assets/flags/FI.png';
 import FR from '../static/assets/flags/FR.png';
+import GB from '../static/assets/flags/GB.png';
 import HU from '../static/assets/flags/HU.png';
 import IE from '../static/assets/flags/IE.png';
 import IT from '../static/assets/flags/IT.png';
@@ -48,6 +49,8 @@ const getFlag = countryCode => {
       return FI;
     case 'FR':
       return FR;
+    case 'GB':
+      return GB;
     case 'HU':
       return HU;
     case 'IE':
