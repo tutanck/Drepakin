@@ -532,7 +532,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
             <Link
               target="_blank"
               className={classes.innerLink}
-              href={`mailto:drepakin@gmail.com?subject=[EC_${_id}] Signalement d'une erreur sur le centre (${name})`}
+              href={`mailto:drepakin@gmail.com?subject=[EC_${_id}] ${lang.report_error_on_this_center} (${name})`}
             >
               <Tooltip title={lang.report_error_on_this_center}>
                 <MenuItem key={'report'} onClick={() => handleCloseMenu()}>
