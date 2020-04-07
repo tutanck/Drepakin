@@ -178,7 +178,9 @@ export default function UsersDialog({
           components={{
             Action: ({ data, action: { action } }) => (
               <Switch
-                checked={data.is_admin}
+                checked={
+                  !!data.is_admin /* !! coercion needed to avoid passing from uncontrolled to controlled (undefined->true/false) */
+                }
                 onChange={event => action(data).onClick(event, data)}
               />
             ),
