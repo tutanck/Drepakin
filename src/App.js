@@ -39,12 +39,6 @@ if (['production', 'staging'].includes(process.env.NODE_ENV)) {
     dsn: process.env.REACT_APP_SENTRY_DSN,
   });
 
-  console.log('====================================');
-  console.log(
-    '------------------------------------------> SENTRY:',
-    process.env.REACT_APP_SENTRY_DSN,
-  );
-  console.log('====================================');
 }
 
 const useStyles = makeStyles(theme => ({
@@ -120,10 +114,10 @@ export default function App() {
       const place = getPlaceFromPosition(position);
       if (place) return setPlace(place);
 
-      return snack.warning(lang.impossible_geolocation);
+      return snack.error(lang.impossible_geolocation);
     } catch (err) {
       console.error('getLocation err', err);
-      return snack.error(lang.allow_geolocation);
+      return snack.warning(lang.allow_geolocation);
     }
   };
 
@@ -135,7 +129,14 @@ export default function App() {
     [] /* Only once : set initial position */,
   );
 
-  const handlePlaceChanged = async rawPlace => {
+  useEffect(() => {
+    if (latLng) {
+      snack.info(lang.position_update + (address ? ` : ${address}` : '...'));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [latLng]);
+
+  const handlePlaceChanged = async (rawPlace) => {
     setPlace({}); /* trigger the loader dialog while updating position */
 
     if (rawPlace) {
@@ -145,11 +146,6 @@ export default function App() {
 
     await askForCurrentPlace();
   };
-
-  useEffect(() => {
-    snack.info(lang.position_update + (address ? ` : ${address}` : '...'));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [latLng]);
 
   return (
     <div>

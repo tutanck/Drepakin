@@ -302,53 +302,65 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
           {for_children && (
             <span className={classes.quickInfo}>
               <Tooltip title={lang.for_children}>
-                <ChildCareIcon className={classes.quickInfoIcon} />
+                <span>
+                  <ChildCareIcon className={classes.quickInfoIcon} />
+                </span>
               </Tooltip>
             </span>
           )}
           {for_adults && (
             <span className={classes.quickInfo}>
               <Tooltip title={lang.for_adults}>
-                <PersonIcon className={classes.quickInfoIcon} />
+                <span>
+                  <PersonIcon className={classes.quickInfoIcon} />
+                </span>
               </Tooltip>
             </span>
           )}
 
           {specialized_consultation && (
             <Tooltip title={lang.specialized_consultation}>
-              <img
-                src={CS}
-                className={classes.imgIcon}
-                alt={lang.specialized_consultation}
-              />
+              <span>
+                <img
+                  src={CS}
+                  className={classes.imgIcon}
+                  alt={lang.specialized_consultation}
+                />
+              </span>
             </Tooltip>
           )}
           {genetic_advice && (
             <Tooltip title={lang.genetic_counseling}>
-              <img
-                src={CG}
-                className={classes.imgIcon}
-                alt={lang.genetic_counseling}
-              />
+              <span>
+                <img
+                  src={CG}
+                  className={classes.imgIcon}
+                  alt={lang.genetic_counseling}
+                />
+              </span>
             </Tooltip>
           )}
 
           {officially_designated_center && (
             <Tooltip title={lang.officially_designated_center}>
-              <img
-                src={RC}
-                className={classes.imgIcon}
-                alt={lang.officially_designated_center}
-              />
+              <span>
+                <img
+                  src={RC}
+                  className={classes.imgIcon}
+                  alt={lang.officially_designated_center}
+                />
+              </span>
             </Tooltip>
           )}
           {ern_member && (
             <Tooltip title={lang.ern_member}>
-              <img
-                src={ERN}
-                className={classes.imgIcon}
-                alt={lang.ern_member}
-              />
+              <span>
+                <img
+                  src={ERN}
+                  className={classes.imgIcon}
+                  alt={lang.ern_member}
+                />
+              </span>
             </Tooltip>
           )}
         </div>
@@ -365,13 +377,15 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
             href={`tel:${phones && phones[0]}`}
           >
             <Tooltip title={lang.call}>
-              <IconButton
-                color="primary"
-                disabled={phones.length === 0}
-                aria-label={lang.call}
-              >
-                <Call />
-              </IconButton>
+              <span>
+                <IconButton
+                  color="primary"
+                  disabled={phones.length === 0}
+                  aria-label={lang.call}
+                >
+                  <Call />
+                </IconButton>
+              </span>
             </Tooltip>
           </Link>
 
@@ -381,25 +395,29 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
             href={`http://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${extra.googlePlaceId}`}
           >
             <Tooltip title={lang.go}>
-              <IconButton
-                color="primary"
-                disabled={!(lat && lng)}
-                aria-label={lang.go}
-              >
-                <DirectionsRun />
-              </IconButton>
+              <span>
+                <IconButton
+                  color="primary"
+                  disabled={!(lat && lng)}
+                  aria-label={lang.go}
+                >
+                  <DirectionsRun />
+                </IconButton>
+              </span>
             </Tooltip>
           </Link>
 
           <Link target="_blank" className={classes.innerLink} href={website}>
             <Tooltip title={lang.consult_website}>
-              <IconButton
-                color="primary"
-                disabled={!website}
-                aria-label={lang.consult_website}
-              >
-                <OpenInNew />
-              </IconButton>
+              <span>
+                <IconButton
+                  color="primary"
+                  disabled={!website}
+                  aria-label={lang.consult_website}
+                >
+                  <OpenInNew />
+                </IconButton>
+              </span>
             </Tooltip>
           </Link>
 
@@ -410,10 +428,12 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
           >
             {props => (
               <Tooltip title={lang.rate}>
-                <IconButton {...props} color="primary" aria-label={lang.rate}>
-                  <Grade />
-                  <span className={classes.iconButtonText}>{user_rate}</span>
-                </IconButton>
+                <span>
+                  <IconButton {...props} color="primary" aria-label={lang.rate}>
+                    <Grade />
+                    <span className={classes.iconButtonText}>{user_rate}</span>
+                  </IconButton>
+                </span>
               </Tooltip>
             )}
           </RaterDialog>
@@ -421,16 +441,18 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
           <CommentsDialog centerId={_id} onCommentSubmit={updateCard}>
             {props => (
               <Tooltip title={lang.comments}>
-                <IconButton
-                  {...props}
-                  color="primary"
-                  aria-label={lang.comments}
-                >
-                  <Comment />
-                  <span className={classes.iconButtonText}>
-                    {comments_count}
-                  </span>
-                </IconButton>
+                <span>
+                  <IconButton
+                    {...props}
+                    color="primary"
+                    aria-label={lang.comments}
+                  >
+                    <Comment />
+                    <span className={classes.iconButtonText}>
+                      {comments_count}
+                    </span>
+                  </IconButton>
+                </span>
               </Tooltip>
             )}
           </CommentsDialog>
@@ -473,13 +495,15 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
               >
                 {props => (
                   <Tooltip title={lang.edit_center}>
-                    <IconButton
-                      {...props}
-                      color="primary"
-                      aria-label={lang.edit_center}
-                    >
-                      <Edit />
-                    </IconButton>
+                    <span>
+                      <IconButton
+                        {...props}
+                        color="primary"
+                        aria-label={lang.edit_center}
+                      >
+                        <Edit />
+                      </IconButton>
+                    </span>
                   </Tooltip>
                 )}
               </EditorDialog>
@@ -514,19 +538,21 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
               href={`http://www.google.com/search?q=${hospital}`}
             >
               <Tooltip title={lang.search_hospital_on_google}>
-                <MenuItem key={'search'} onClick={() => handleCloseMenu()}>
-                  <ListItemIcon>
-                    <IconButton
-                      color="primary"
-                      aria-label={lang.search_hospital_on_google}
-                    >
-                      <SearchIcon />
-                    </IconButton>
-                  </ListItemIcon>
-                  <Typography variant="inherit">
-                    {lang.search_on_google}
-                  </Typography>
-                </MenuItem>
+                <span>
+                  <MenuItem key={'search'} onClick={() => handleCloseMenu()}>
+                    <ListItemIcon>
+                      <IconButton
+                        color="primary"
+                        aria-label={lang.search_hospital_on_google}
+                      >
+                        <SearchIcon />
+                      </IconButton>
+                    </ListItemIcon>
+                    <Typography variant="inherit">
+                      {lang.search_on_google}
+                    </Typography>
+                  </MenuItem>
+                </span>
               </Tooltip>
             </Link>
             <Link
@@ -535,17 +561,21 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
               href={`mailto:drepakin@gmail.com?subject=[EC_${_id}] ${lang.report_error_on_this_center} (${name})`}
             >
               <Tooltip title={lang.report_error_on_this_center}>
-                <MenuItem key={'report'} onClick={() => handleCloseMenu()}>
-                  <ListItemIcon>
-                    <IconButton
-                      color="primary"
-                      aria-label={lang.report_error_on_this_center}
-                    >
-                      <Report />
-                    </IconButton>
-                  </ListItemIcon>
-                  <Typography variant="inherit">{lang.report_error}</Typography>
-                </MenuItem>
+                <span>
+                  <MenuItem key={'report'} onClick={() => handleCloseMenu()}>
+                    <ListItemIcon>
+                      <IconButton
+                        color="primary"
+                        aria-label={lang.report_error_on_this_center}
+                      >
+                        <Report />
+                      </IconButton>
+                    </ListItemIcon>
+                    <Typography variant="inherit">
+                      {lang.report_error}
+                    </Typography>
+                  </MenuItem>
+                </span>
               </Tooltip>
             </Link>
             <Hidden smUp>

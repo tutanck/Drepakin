@@ -105,6 +105,7 @@ export default function MainPage({
       setIsLoadingCenters(true);
 
       const { lat, lng } = latLng;
+      
       const data = await get(`/centers/near/${lng}/${lat}`, {
         params: { page: page, perPage: 7 },
       });
@@ -128,8 +129,6 @@ export default function MainPage({
   useEffect(() => {
     if (latLng) {
       fetchCenters();
-    } else {
-      snack.warning(lang.undefined_position);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, latLng]);
@@ -211,7 +210,7 @@ export default function MainPage({
       )}
 
       <LoaderDialog
-        open={isLoadingCenters || !latLng}
+        open={isLoadingCenters}
         showProgress={isLoadingCenters}
       />
       {centers.length > 0 && (
