@@ -66,7 +66,7 @@
   "problem": "Problem",
   "ideas": "Ideas",
   "impossible_geolocation": "Impossible geolocation",
-  "allow_geolocation": "Please allow geolocation",
+  "allow_geolocation": "Please allow geolocation to find the centers around you",
   "position_update": "Updating search position",
   "allow_local_storage": "To sign in, please allow local storage on your browser",
   "connexion_error": "Connexion error. Please try again later",
