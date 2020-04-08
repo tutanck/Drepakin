@@ -34,7 +34,9 @@ export default function StatusSnackbar({
   const [open, setOpen] = useState(!!message);
 
   useEffect(() => {
-    setOpen(true);
+    if (triggerId) {
+      setOpen(true);
+    }
   }, [triggerId]);
 
   console.log('StatusSnackbar', message, variant, open); //TODO REM
