@@ -123,17 +123,20 @@ export default function AuthManager() {
                 placement === 'bottom' ? 'center top' : 'center bottom',
             }}
           >
-            <ClickAwayListener onClickAway={handleMenuClose}>
-              <Paper>                
-                <GoogleLogout
-                  className={classes.googleLogoutBtn}
-                  clientId={googleClientId}
-                  buttonText={lang.logout}
-                  onLogoutSuccess={onGoogleLogoutResponse}
-                  onFailure={onGoogleLogoutResponse}
-                />
-              </Paper>
-            </ClickAwayListener>
+            <div>
+              <ClickAwayListener onClickAway={handleMenuClose}>
+                <Paper>                
+                  <GoogleLogout
+                    className={classes.googleLogoutBtn}
+                    onClick={()=>console.log("sqqs")}
+                    clientId={googleClientId}
+                    buttonText={lang.logout}
+                    onLogoutSuccess={onGoogleLogoutResponse}
+                    onFailure={onGoogleLogoutResponse}
+                  />
+                </Paper>
+              </ClickAwayListener>
+            </div>
           </Grow>
         )}
       </Popper>
