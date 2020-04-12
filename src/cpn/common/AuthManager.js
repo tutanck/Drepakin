@@ -86,6 +86,7 @@ export default function AuthManager() {
   };
 
   const onGoogleLogoutResponse = () => {
+    console.log("onGoogleLogoutResponse")  // TODO rem
     updateUser(null);
     setPopperOpened(false);
   };
@@ -128,7 +129,7 @@ export default function AuthManager() {
                   <GoogleLogout
                     className={classes.googleLogoutBtn}
                     clientId={googleClientId}
-                    buttonText="Déconnexion"
+                    buttonText={lang.logout}
                     onLogoutSuccess={onGoogleLogoutResponse}
                     onFailure={onGoogleLogoutResponse}
                   />

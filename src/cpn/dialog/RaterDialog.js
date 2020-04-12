@@ -42,15 +42,16 @@ export default function RaterDialog({
   const [dialogOpened, setDialogOpened] = useState(false);
 
   const handleOpenDialog = () => {
+    setDialogOpened(true);
+  };
+
+  const handleSubmit = async () => {
     if (!user) {
       snack.info(lang.sign_to_rate);
       setLoginDialogOpened(true);
       return;
     }
-    setDialogOpened(true);
-  };
-
-  const handleSubmit = async () => {
+    
     if (![1, 2, 3, 4, 5].includes(rate)) {
       snack.info(lang.must_rate_boundary);
       return;
