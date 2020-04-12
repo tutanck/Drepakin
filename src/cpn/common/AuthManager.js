@@ -5,6 +5,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { isLocalStorageAvailable } from '../../utils/local-storage';
 import { AppContext } from '../../context/AppContext';
 import { post } from '../../utils/api-client';
+import { noOp } from '../../utils/toolbox';
 import { getBearedToken } from '../../utils/auth-service';
 import {
   Grow,
@@ -85,8 +86,8 @@ export default function AuthManager() {
     setLoginDialogOpened(false);
   };
 
+  //see /* https://github.com/anthonyjgrove/react-google-login/issues/315 */
   const onGoogleLogoutResponse = () => {
-    console.log("onGoogleLogoutResponse")  // TODO rem
     updateUser(null);
     setPopperOpened(false);
   };
@@ -123,19 +124,20 @@ export default function AuthManager() {
                 placement === 'bottom' ? 'center top' : 'center bottom',
             }}
           >
-            <Paper>
+            <div>
               <ClickAwayListener onClickAway={handleMenuClose}>
-                <div>
+                <Paper onClick={onGoogleLogoutResponse}>                
                   <GoogleLogout
                     className={classes.googleLogoutBtn}
+                    onClick={()=>console.log("sqqs")}
                     clientId={googleClientId}
                     buttonText={lang.logout}
-                    onLogoutSuccess={onGoogleLogoutResponse}
-                    onFailure={onGoogleLogoutResponse}
+                    onLogoutSuccess={noOp}
+                    onFailure={noOp}
                   />
-                </div>
+                </Paper>
               </ClickAwayListener>
-            </Paper>
+            </div>
           </Grow>
         )}
       </Popper>
