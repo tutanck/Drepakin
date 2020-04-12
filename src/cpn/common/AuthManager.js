@@ -128,7 +128,7 @@ export default function AuthManager() {
                   <GoogleLogout
                     className={classes.googleLogoutBtn}
                     clientId={googleClientId}
-                    buttonText="Déconnexion"
+                    buttonText={lang.logout}
                     onLogoutSuccess={onGoogleLogoutResponse}
                     onFailure={onGoogleLogoutResponse}
                   />
