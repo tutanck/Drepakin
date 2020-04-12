@@ -86,7 +86,7 @@ export default function AuthManager() {
   };
 
   const onGoogleLogoutResponse = () => {
-    console.log("onGoogleLogoutResponse")  // TODO rem
+    console.log('onGoogleLogoutResponse'); // TODO rem
     updateUser(null);
     setPopperOpened(false);
   };
@@ -123,19 +123,17 @@ export default function AuthManager() {
                 placement === 'bottom' ? 'center top' : 'center bottom',
             }}
           >
-            <Paper>
-              <ClickAwayListener onClickAway={handleMenuClose}>
-                <div>
-                  <GoogleLogout
-                    className={classes.googleLogoutBtn}
-                    clientId={googleClientId}
-                    buttonText={lang.logout}
-                    onLogoutSuccess={onGoogleLogoutResponse}
-                    onFailure={onGoogleLogoutResponse}
-                  />
-                </div>
-              </ClickAwayListener>
-            </Paper>
+            <ClickAwayListener onClickAway={handleMenuClose}>
+              <Paper>                
+                <GoogleLogout
+                  className={classes.googleLogoutBtn}
+                  clientId={googleClientId}
+                  buttonText={lang.logout}
+                  onLogoutSuccess={onGoogleLogoutResponse}
+                  onFailure={onGoogleLogoutResponse}
+                />
+              </Paper>
+            </ClickAwayListener>
           </Grow>
         )}
       </Popper>
