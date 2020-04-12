@@ -86,6 +86,7 @@ export default function AuthManager() {
   };
 
   const onGoogleLogoutResponse = () => {
+    console.log("onGoogleLogoutResponse")  // TODO rem
     updateUser(null);
     setPopperOpened(false);
   };
