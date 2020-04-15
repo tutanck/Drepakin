@@ -1,5 +1,6 @@
 {
   "go": "Go There",
+  "open_in_map": "Open in Maps",
   "rate": "Rate",
   "call": "Call",
   "show_more": "Show more",
@@ -101,7 +102,7 @@
   "i_understand": "I understand",
   "warning": "Warning",
   "location_errors_happen": "Inaccurate geolocation data may possibly arise.",
-  "be_extra_careful_on_go": "Be extremely careful when using the « Go There » feature !",
+  "be_extra_careful_on_go": "Be extremely careful when using the « Open in Maps » feature !",
   "decline_responsibility": "drepakin.com declines all responsibility in the event of inaccuracy in the data provided to its users.",
   "see_legal_notices": "For more information, please consult the legal notices.",
   "users_list": "Users list",

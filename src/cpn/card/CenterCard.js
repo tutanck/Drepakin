@@ -42,7 +42,7 @@ import {
 import {
   ExpandMore,
   Call,
-  DirectionsRun,
+  Room,
   OpenInNew,
   Grade,
   Comment,
@@ -394,14 +394,14 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
             className={classes.innerLink}
             href={`http://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${extra.googlePlaceId}`}
           >
-            <Tooltip title={lang.go}>
+            <Tooltip title={lang.open_in_map}>
               <span>
                 <IconButton
                   color="primary"
                   disabled={!(lat && lng)}
-                  aria-label={lang.go}
+                  aria-label={lang.open_in_map}
                 >
-                  <DirectionsRun />
+                  <Room />
                 </IconButton>
               </span>
             </Tooltip>
