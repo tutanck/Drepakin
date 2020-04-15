@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
   faInstagram,
-  faWhatsappSquare,
+  /* faWhatsappSquare, */
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import Z from '../../static/assets/Z.png';
@@ -275,7 +275,7 @@ export default function StickyFooter({ lang, language }) {
         </Grid>
 
         <Grid item xs={12} sm={4} md={3} className={classes.block}>
-          <div className={classes.blockTitle}>{lang.stay_in_touch}</div>
+          <div className={classes.blockTitle}>{lang.stay_tuned}</div>
           <div>
             <a
               className={clsx(classes.socialNetworkIcon, classes.facebook)}
@@ -286,14 +286,14 @@ export default function StickyFooter({ lang, language }) {
               <FontAwesomeIcon size="3x" icon={faFacebook} />
             </a>
 
-            <a
+           {/*  <a
               className={clsx(classes.socialNetworkIcon, classes.whatsapp)}
               href="https://web.whatsapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon size="3x" icon={faWhatsappSquare} />
-            </a>
+            </a> */}
 
             <a
               className={clsx(classes.socialNetworkIcon, classes.instagram)}
