@@ -11,6 +11,7 @@ import CenterCard from '../cpn/card/CenterCard';
 import { get, post } from '../utils/api-client';
 import LegendDialog from '../cpn/dialog/LegendDialog';
 import LoaderDialog from '../cpn/dialog/LoaderDialog';
+import AppBar from '../cpn/bar/AppBar';
 import centerShape from '../static/resources/json/center-shape';
 import CenterSchema from '../validation/CensterSchema';
 import {
@@ -21,9 +22,11 @@ import { pop } from '../utils/toolbox';
 import LocatorDialog from '../cpn/dialog/LocatorDialog';
 import { MyLocation } from '@material-ui/icons';
 import googleForms from '../utils/google-form-selector';
+import { getPlaceFromGoogle } from '../utils/google-places';
+import getLocation, { getPlaceFromPosition } from '../utils/geolocation';
 
-const useStyles = makeStyles(theme => ({
-  root: {
+const useStyles = makeStyles((theme) => ({
+  main: {
     display: 'flex',
     flexGrow: 1,
     flexDirection: 'column',
@@ -63,12 +66,13 @@ export default function MainPage({
   lang,
   user,
   snack,
-  latLng,
   language,
   updateUser,
   setLoginDialogOpened,
 }) {
   const classes = useStyles();
+
+  const [{ latLng, address }, setPlace] = useState({});
 
   const [centers, setCenters] = useState([]);
   const [pageCount, setPageCount] = useState(1);
@@ -89,7 +93,7 @@ export default function MainPage({
 
     onInternalServerError: () => snack.error(lang.an_error_occured),
 
-    onBadRequest: err => {
+    onBadRequest: (err) => {
       const responseDataErrorMessageErrors = getResponseDataErrorMessageErrors(
         err,
       );
@@ -101,11 +105,11 @@ export default function MainPage({
   });
 
   async function fetchCenters(page = 1) {
-    try {
-      setIsLoadingCenters(true);
+    setIsLoadingCenters(true);
 
+    try {
       const { lat, lng } = latLng;
-      
+
       const data = await get(`/centers/near/${lng}/${lat}`, {
         params: { page: page, perPage: 7 },
       });
@@ -126,161 +130,199 @@ export default function MainPage({
     }
   }
 
+  const askForCurrentPlace = async () => {
+    setIsLoadingCenters(true);
+
+    try {
+      const position = await getLocation();
+
+      const place = getPlaceFromPosition(position);
+      if (place) return setPlace(place);
+
+      return snack.error(lang.impossible_geolocation);
+    } catch (err) {
+      console.error('getLocation err', err);
+      return snack.warning(lang.allow_geolocation);
+    }
+  };
+
+  const handlePlaceChanged = async (rawPlace) => {
+    if (rawPlace) {
+      const place = getPlaceFromGoogle(rawPlace);
+      if (place) return setPlace(place);
+    }
+
+    await askForCurrentPlace();
+  };
+
+  useEffect(
+    () => {
+      askForCurrentPlace();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [
+      /* Only once : set initial location */
+    ],
+  );
+
   useEffect(() => {
     if (latLng) {
       fetchCenters();
+      snack.info(lang.position_update + (address ? ` : ${address}` : '.'));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, latLng]);
 
   return (
-    <div className={classes.root} ref={el => setCentersGrid(el)}>
-      {user && user.is_admin && (
-        <Hidden xsDown>
-          <div className={classes.adminDialogsContainer}>
-            <EditorDialog
-              title={'Ajouter un centre'}
-              validationSchema={CenterSchema}
-              fetchFn={async () => ({ ...centerShape })}
-              pushFn={async center =>
-                post(`/centers/admin/new`, { data: center })
-              }
-              onDataSubmited={() => snack.sucess(lang.search_after_edit)}
-              onDataLoadingError={onServerCallError}
-              onSubmitError={onServerCallError}
-              features={[
-                ({ liftDataUp, ...rest }) => (
-                  <LocatorDialog
-                    {...rest}
-                    key="EditorDialog-LocatorDialog"
-                    onLocationSelected={liftDataUp}
-                  >
-                    {props => (
-                      <Fab
-                        {...props}
-                        size="small"
-                        color="primary"
-                        variant="extended"
-                      >
-                        <MyLocation className={classes.spaceRight} />
-                        <span className={classes.spaceRight}>
-                          {lang.locate}
-                        </span>
-                      </Fab>
-                    )}
-                  </LocatorDialog>
-                ),
-              ]}
-            >
-              {props => (
-                <Fab
-                  {...props}
-                  color="primary"
-                  variant="extended"
-                  className={classes.adminBtn}
-                >
-                  <Edit />
-                  <span className={classes.adminBtnText}>
-                    {lang.add_new_center}
-                  </span>
-                </Fab>
-              )}
-            </EditorDialog>
-            <UsersDialog
-              title={lang.users_list}
-              onDataLoadingError={onServerCallError}
-              onSubmitError={onServerCallError}
-            >
-              {props => (
-                <Fab
-                  {...props}
-                  color="primary"
-                  variant="extended"
-                  className={classes.adminBtn}
-                >
-                  <People />
-                  <span className={classes.adminBtnText}>
-                    {lang.users_list}
-                  </span>
-                </Fab>
-              )}
-            </UsersDialog>
-          </div>
-        </Hidden>
-      )}
+    <div>
+      <AppBar lang={lang} name="Drepakin" onPlaceChanged={handlePlaceChanged} />
 
-      <LoaderDialog
-        open={isLoadingCenters}
-        showProgress={isLoadingCenters}
-      />
-      {centers.length > 0 && (
-        <Grid container spacing={3}>
-          {centers.map(center => (
-            <Grid item key={center._id} xs={12}>
-              <CenterCard
-                user={user}
-                lang={lang}
-                center={center}
-                onServerCallError={onServerCallError}
+      <LoaderDialog open={isLoadingCenters} />
+
+      <div className={classes.main} ref={(el) => setCentersGrid(el)}>
+        {user && user.is_admin && (
+          <Hidden xsDown>
+            <div className={classes.adminDialogsContainer}>
+              <EditorDialog
+                title={'Ajouter un centre'}
+                validationSchema={CenterSchema}
+                fetchFn={async () => ({ ...centerShape })}
+                pushFn={async (center) =>
+                  post(`/centers/admin/new`, { data: center })
+                }
+                onDataSubmited={() => snack.sucess(lang.search_after_edit)}
+                onDataLoadingError={onServerCallError}
+                onSubmitError={onServerCallError}
+                features={[
+                  ({ liftDataUp, ...rest }) => (
+                    <LocatorDialog
+                      {...rest}
+                      key="EditorDialog-LocatorDialog"
+                      onLocationSelected={liftDataUp}
+                    >
+                      {(props) => (
+                        <Fab
+                          {...props}
+                          size="small"
+                          color="primary"
+                          variant="extended"
+                        >
+                          <MyLocation className={classes.spaceRight} />
+                          <span className={classes.spaceRight}>
+                            {lang.locate}
+                          </span>
+                        </Fab>
+                      )}
+                    </LocatorDialog>
+                  ),
+                ]}
+              >
+                {(props) => (
+                  <Fab
+                    {...props}
+                    color="primary"
+                    variant="extended"
+                    className={classes.adminBtn}
+                  >
+                    <Edit />
+                    <span className={classes.adminBtnText}>
+                      {lang.add_new_center}
+                    </span>
+                  </Fab>
+                )}
+              </EditorDialog>
+              <UsersDialog
+                title={lang.users_list}
+                onDataLoadingError={onServerCallError}
+                onSubmitError={onServerCallError}
+              >
+                {(props) => (
+                  <Fab
+                    {...props}
+                    color="primary"
+                    variant="extended"
+                    className={classes.adminBtn}
+                  >
+                    <People />
+                    <span className={classes.adminBtnText}>
+                      {lang.users_list}
+                    </span>
+                  </Fab>
+                )}
+              </UsersDialog>
+            </div>
+          </Hidden>
+        )}
+
+        {centers.length > 0 && (
+          <Grid container spacing={3}>
+            {centers.map((center) => (
+              <Grid item key={center._id} xs={12}>
+                <CenterCard
+                  user={user}
+                  lang={lang}
+                  center={center}
+                  onServerCallError={onServerCallError}
+                />
+              </Grid>
+            ))}
+
+            <Grid
+              item
+              xs={12}
+              key={'paginatorSection'}
+              className={classes.paginatorContainer}
+            >
+              <Pagination
+                limit={1}
+                offset={currentPage - 1}
+                total={pageCount}
+                disabled={isLoadingCenters}
+                onClick={(e, offset) => fetchCenters(offset + 1)}
+                previousPageLabel="Prec."
+                nextPageLabel="Suiv."
               />
             </Grid>
-          ))}
 
-          <Grid
-            item
-            xs={12}
-            key={'paginatorSection'}
-            className={classes.paginatorContainer}
-          >
-            <Pagination
-              limit={1}
-              offset={currentPage - 1}
-              total={pageCount}
-              disabled={isLoadingCenters}
-              onClick={(e, offset) => fetchCenters(offset + 1)}
-              previousPageLabel="Prec."
-              nextPageLabel="Suiv."
-            />
-          </Grid>
-
-          <Grid
-            item
-            xs={12}
-            key={'legendSection'}
-            className={classes.legendSectionContainer}
-          >
-            <Button
-              color="primary"
-              variant="outlined"
-              onClick={() => setIsLegendDialogOpen(true)}
+            <Grid
+              item
+              xs={12}
+              key={'legendSection'}
+              className={classes.legendSectionContainer}
             >
-              {lang.show_caption}
-            </Button>
+              <Button
+                color="primary"
+                variant="outlined"
+                onClick={() => setIsLegendDialogOpen(true)}
+              >
+                {lang.show_caption}
+              </Button>
 
-            <LegendDialog
-              lang={lang}
-              open={isLegendDialogOpen}
-              onClose={() => setIsLegendDialogOpen(false)}
-            />
-          </Grid>
+              <LegendDialog
+                lang={lang}
+                open={isLegendDialogOpen}
+                onClose={() => setIsLegendDialogOpen(false)}
+              />
+            </Grid>
 
-          <Grid item xs={12} key={'indicationSection'}>
-            <span className={classes.indication}>{lang.cant_find}</span>
-          </Grid>
+            <Grid item xs={12} key={'indicationSection'}>
+              <span className={classes.indication}>{lang.cant_find}</span>
+            </Grid>
 
-          <Grid item xs={12} key={'callToActionSection'}>
-            <Button
-              color={'secondary'}
-              variant="outlined"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={googleForms[language]}
-            >
-              {lang.add_known_center}
-            </Button>
+            <Grid item xs={12} key={'callToActionSection'}>
+              <Button
+                color={'secondary'}
+                variant="outlined"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={googleForms[language]}
+              >
+                {lang.add_known_center}
+              </Button>
+            </Grid>
           </Grid>
-        </Grid>
-      )}
+        )}
+      </div>
     </div>
   );
 }
@@ -291,9 +333,5 @@ MainPage.propTypes = {
   language: PropTypes.string.isRequired,
   updateUser: PropTypes.func.isRequired,
   setLoginDialogOpened: PropTypes.func.isRequired,
-  latLng: PropTypes.exact({
-    lat: PropTypes.number.isRequired,
-    lng: PropTypes.number.isRequired,
-  }),
   user: PropTypes.object,
 };
