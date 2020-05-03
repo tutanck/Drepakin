@@ -9,6 +9,7 @@ import {
   Select,
   MenuItem,
 } from '@material-ui/core';
+import { Switch, Route } from 'react-router-dom';
 import { grey } from '@material-ui/core/colors';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { AppContextProvider } from './context/AppContext';
@@ -23,6 +24,8 @@ import supportedLanguages, {
 } from './utils/supported-languages';
 import langs from './static/resources/langs';
 import SnackBar from './cpn/bar/SnackBar';
+import Blog from './page/blog/Blog';
+import BlogPost from './page/BlogPost';
 import MainPage from './page/MainPage';
 import Footer from './cpn/common/Footer';
 import { ID } from './utils/toolbox';
@@ -115,36 +118,48 @@ export default function App() {
               setLoginDialogOpened,
             }}
           >
-            {window.navigator.onLine ? (
-              <MainPage
-                lang={lang}
-                user={user}
-                snack={snack}
-                language={language}
-                updateUser={updateUser}
-                setLoginDialogOpened={setLoginDialogOpened}
-              />
-            ) : (
-              <Container maxWidth="sm" className={classes.container}>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="h5"
-                  className={classes.text}
-                >
-                  {lang.no_network}
-                </Typography>
+            <Switch>
+              <Route path="/blog/:id">
+                <BlogPost />
+              </Route>
 
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  className={classes.button}
-                  onClick={() => document.location.reload(true)}
-                >
-                  {lang.retry}
-                </Button>
-              </Container>
-            )}
+              <Route path="/blog">
+                <Blog lang={lang} />
+              </Route>
+
+              <Route path="/">
+                {window.navigator.onLine ? (
+                  <MainPage
+                    lang={lang}
+                    user={user}
+                    snack={snack}
+                    language={language}
+                    updateUser={updateUser}
+                    setLoginDialogOpened={setLoginDialogOpened}
+                  />
+                ) : (
+                  <Container maxWidth="sm" className={classes.container}>
+                    <Typography
+                      gutterBottom
+                      variant="h6"
+                      component="h5"
+                      className={classes.text}
+                    >
+                      {lang.no_network}
+                    </Typography>
+
+                    <Button
+                      color="secondary"
+                      variant="contained"
+                      className={classes.button}
+                      onClick={() => document.location.reload(true)}
+                    >
+                      {lang.retry}
+                    </Button>
+                  </Container>
+                )}
+              </Route>
+            </Switch>
           </AppContextProvider>
 
           <div className={classes.formControlContainer}>
