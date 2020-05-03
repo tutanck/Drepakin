@@ -175,7 +175,7 @@ export default function MainPage({
 
   return (
     <div>
-      <AppBar lang={lang} name="Drepakin" onPlaceChanged={handlePlaceChanged} />
+      <AppBar lang={lang} name="Drepakin App" onPlaceChanged={handlePlaceChanged} />
 
       <LoaderDialog open={isLoadingCenters} />
 
