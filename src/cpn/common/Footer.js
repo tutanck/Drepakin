@@ -17,10 +17,9 @@ import {
 import Z from '../../static/assets/Z.png';
 import AboutDialog from '../dialog/AboutDialog';
 import LegalNoticeDialog from '../dialog/LegalNoticeDialog';
-import DisclaimerDialog from '../dialog/DisclaimerDialog';
 import googleForms from '../../utils/google-form-selector';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
     display: 'flex',
@@ -146,8 +145,6 @@ export default function StickyFooter({ lang, language }) {
         open={aboutDialogOpened}
         onClose={() => setAboutDialogOpened(false)}
       />
-
-      <DisclaimerDialog lang={lang} />
 
       <LegalNoticeDialog
         lang={lang}
@@ -286,7 +283,7 @@ export default function StickyFooter({ lang, language }) {
               <FontAwesomeIcon size="3x" icon={faFacebook} />
             </a>
 
-           {/*  <a
+            {/*  <a
               className={clsx(classes.socialNetworkIcon, classes.whatsapp)}
               href="https://web.whatsapp.com/"
               target="_blank"

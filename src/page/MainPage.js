@@ -11,6 +11,7 @@ import CenterCard from '../cpn/card/CenterCard';
 import { get, post } from '../utils/api-client';
 import LegendDialog from '../cpn/dialog/LegendDialog';
 import LoaderDialog from '../cpn/dialog/LoaderDialog';
+import DisclaimerDialog from '../cpn/dialog/DisclaimerDialog';
 import AppBar from '../cpn/bar/AppBar';
 import centerShape from '../static/resources/json/center-shape';
 import CenterSchema from '../validation/CensterSchema';
@@ -175,7 +176,13 @@ export default function MainPage({
 
   return (
     <div>
-      <AppBar lang={lang} name="Drepakin App" onPlaceChanged={handlePlaceChanged} />
+      <DisclaimerDialog lang={lang} />
+
+      <AppBar
+        lang={lang}
+        name="Drepakin App"
+        onPlaceChanged={handlePlaceChanged}
+      />
 
       <LoaderDialog open={isLoadingCenters} />
 
