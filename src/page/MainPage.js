@@ -11,6 +11,7 @@ import CenterCard from '../cpn/card/CenterCard';
 import { get, post } from '../utils/api-client';
 import LegendDialog from '../cpn/dialog/LegendDialog';
 import LoaderDialog from '../cpn/dialog/LoaderDialog';
+import DisclaimerDialog from '../cpn/dialog/DisclaimerDialog';
 import AppBar from '../cpn/bar/AppBar';
 import centerShape from '../static/resources/json/center-shape';
 import CenterSchema from '../validation/CensterSchema';
@@ -59,6 +60,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-evenly',
     width: '100%',
+  },
+  welcomeBtn: {
+    alignSelf: 'flex-start',
+    margin: 16,
   },
 }));
 
@@ -175,11 +180,26 @@ export default function MainPage({
 
   return (
     <div>
-      <AppBar lang={lang} name="Drepakin" onPlaceChanged={handlePlaceChanged} />
+      <DisclaimerDialog lang={lang} />
+
+      <AppBar
+        lang={lang}
+        name="Drepakin App"
+        onPlaceChanged={handlePlaceChanged}
+      />
 
       <LoaderDialog open={isLoadingCenters} />
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
+        {/* <Button
+          href="/"
+          size="small"
+          color="primary"
+          className={classes.welcomeBtn}
+        >
+          {lang.welcome}
+        </Button> */}
+
         {user && user.is_admin && (
           <Hidden xsDown>
             <div className={classes.adminDialogsContainer}>
@@ -253,7 +273,6 @@ export default function MainPage({
             </div>
           </Hidden>
         )}
-
         {centers.length > 0 && (
           <Grid container spacing={3}>
             {centers.map((center) => (

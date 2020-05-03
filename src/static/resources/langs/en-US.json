@@ -132,5 +132,9 @@
   "no_network": "You are not connected !",
   "retry": "Retry",
   "contribute_to_dev": "\\ contribute --dev",
-  "inaccuracy": "Inaccuracy"
+  "inaccuracy": "Inaccuracy",
+  "archives": "Archives",
+  "continue_reading": "Read further...",
+  "go_to_app": "Go to App",
+  "welcome": "Welcome"
 }
