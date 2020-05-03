@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainFeaturedPostLink: {
-    color: 'white',
+    color: '#61dafb',
   },
 }));
 

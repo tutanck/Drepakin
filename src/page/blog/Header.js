@@ -32,9 +32,14 @@ export default function Header({ lang }) {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button size="small" href="https://paypal.me/pools/c/8nXuBPoX1L">
+        <Button
+          size="small"
+          color="secondary"
+          href="https://paypal.me/pools/c/8nXuBPoX1L"
+        >
           {lang.support_us}
         </Button>
+
         <Typography
           noWrap
           variant="h5"
@@ -45,10 +50,12 @@ export default function Header({ lang }) {
         >
           Drepakin
         </Typography>
-        <Button variant="outlined" size="small" href="/">
+
+        <Button variant="outlined" href="/" size="small" color="primary">
           {lang.go_to_app}
         </Button>
       </Toolbar>
+
       {/* <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
         {sections.map((section) => (
           <Link
