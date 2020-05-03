@@ -61,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     width: '100%',
   },
+  welcomeBtn: {
+    alignSelf: 'flex-start',
+    margin: 16,
+  },
 }));
 
 export default function MainPage({
@@ -187,6 +191,15 @@ export default function MainPage({
       <LoaderDialog open={isLoadingCenters} />
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
+        {/* <Button
+          href="/"
+          size="small"
+          color="primary"
+          className={classes.welcomeBtn}
+        >
+          {lang.welcome}
+        </Button> */}
+
         {user && user.is_admin && (
           <Hidden xsDown>
             <div className={classes.adminDialogsContainer}>
@@ -260,7 +273,6 @@ export default function MainPage({
             </div>
           </Hidden>
         )}
-
         {centers.length > 0 && (
           <Grid container spacing={3}>
             {centers.map((center) => (
