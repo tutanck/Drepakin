@@ -47,7 +47,13 @@ function Content({ url }) {
 export default function BlogPost() {
   const { row, slug } = useParams();
 
-  const post = posts[row].find((p) => p.slug === slug);
+  let post;
+
+  const drawer = posts[row];
+
+  if (drawer) {
+    post = drawer.find((p) => p.slug === slug);
+  }
 
   return post ? <Content url={post.content} /> : <Redirect to="/" />;
 }
