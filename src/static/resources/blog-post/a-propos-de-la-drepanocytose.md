@@ -4,7 +4,7 @@
 
 **La drépanocytose** également connue sous le nom d'anémie falciforme est une maladie génétique héréditaire qui affecte l'hémoglobine dans les globules rouges.
 
-L'hémoglobine est la protéine responsable du transport de l'oxygène dans le sang. Les personnes drépanocytaires ont une hémoglobine dite "anormale". Lorsque la concentration d'oxygène dans le sang diminue, l'hémoglobine chez les patients drépanocytaires déforme les globules rouges. Celles-ci prennent alors la forme de faucilles.
+L'hémoglobine est la protéine responsable du transport de l'oxygène dans le sang. Les personnes drépanocytaires ont une hémoglobine dite "anormale". Lorsque la concentration d'oxygène dans le sang diminue, l'hémoglobine chez les patients drépanocytaires déforme les globules rouges. Ceux-ci prennent alors la forme de faucilles.
 
 La drépanocytose se manifeste notamment par une anémie chronique, des crises vaso-occlusives extrêmement douloureuses et une vulnérabilité aux infections.
 
