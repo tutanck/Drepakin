@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   markdown: {
     ...theme.typography.body2,
     color: blueGrey[800],
-    padding: theme.spacing(3, 0),
+    padding: theme.spacing(3, 3),
   },
 }));
 
