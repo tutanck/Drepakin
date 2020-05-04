@@ -23,20 +23,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BlogPost() {
+function Content({ url }) {
   const classes = useStyles();
-
-  const { row, slug } = useParams();
 
   const [content, setContent] = useState('');
 
-  const post = posts[row].find((p) => p.slug === slug);
-
-  fetch(post.content)
+  fetch(url)
     .then((response) => response.text())
-    .then(setContent);
+    .then(setContent)
+    .catch((err) => alert('E404-2: Mising content'));
 
-  return post ? (
+  return (
     <div className={classes.root}>
       <Button href="/" color="primary" className={classes.welcomeBtn}>
         {'<<<'}
@@ -44,7 +41,13 @@ export default function BlogPost() {
 
       <Markdown className={classes.markdown}>{content}</Markdown>
     </div>
-  ) : (
-    <Redirect to="/" />
   );
+}
+
+export default function BlogPost() {
+  const { row, slug } = useParams();
+
+  const post = posts[row].find((p) => p.slug === slug);
+
+  return post ? <Content url={post.content} /> : <Redirect to="/" />;
 }
