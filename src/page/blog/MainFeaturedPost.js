@@ -74,7 +74,7 @@ export default function MainFeaturedPost({ post, lang }) {
 
             <Link
               variant="subtitle1"
-              href={post.url}
+              href={`/blog/news/${post.slug}`}
               className={classes.mainFeaturedPostLink}
             >
               {lang.continue_reading}

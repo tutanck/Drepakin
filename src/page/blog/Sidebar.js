@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import { archives } from '../../static/resources/blog-post';
+import posts from '../../static/resources/blog-post';
 
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
@@ -37,8 +37,13 @@ export default function Sidebar({ lang }) {
         {lang.archives}
       </Typography>
 
-      {archives.map(({ title, url }) => (
-        <Link display="block" variant="body1" href={url} key={title}>
+      {posts.archives.map(({ title, slug }) => (
+        <Link
+          key={slug}
+          display="block"
+          variant="body1"
+          href={`/blog/archives/${slug}`}
+        >
           {title}
         </Link>
       ))}

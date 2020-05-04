@@ -119,7 +119,7 @@ export default function App() {
             }}
           >
             <Switch>
-              <Route path="/blog/:id">
+              <Route path="/blog/:row/:slug">
                 <BlogPost />
               </Route>
 
