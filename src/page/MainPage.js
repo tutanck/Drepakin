@@ -191,14 +191,14 @@ export default function MainPage({
       <LoaderDialog open={isLoadingCenters} />
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
-        {/* <Button
+        <Button
           href="/"
           size="small"
           color="primary"
           className={classes.welcomeBtn}
         >
           {lang.welcome}
-        </Button> */}
+        </Button>
 
         {user && user.is_admin && (
           <Hidden xsDown>
