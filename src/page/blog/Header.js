@@ -51,7 +51,7 @@ export default function Header({ lang }) {
           Drepakin
         </Typography>
 
-        <Button variant="outlined" href="/" size="small" color="primary">
+        <Button variant="outlined" href="/app" size="small" color="primary">
           {lang.go_to_app}
         </Button>
       </Toolbar>
