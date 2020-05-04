@@ -38,7 +38,7 @@ export default function BlogPost() {
 
   return post ? (
     <div className={classes.root}>
-      <Button href="/blog" color="primary" className={classes.welcomeBtn}>
+      <Button href="/" color="primary" className={classes.welcomeBtn}>
         {'<<<'}
       </Button>
 
