@@ -40,6 +40,9 @@ if (['production', 'staging'].includes(process.env.NODE_ENV)) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    margin: 'auto',
+  },
   text: {
     fontSize: 32,
     color: grey[600],
@@ -107,60 +110,62 @@ export default function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
 
-          <AppContextProvider
-            value={{
-              lang,
-              user,
-              snack,
-              language,
-              updateUser,
-              loginDialogOpened,
-              setLoginDialogOpened,
-            }}
-          >
-            <Switch>
-              <Route path="/blog/:id">
-                <BlogPost />
-              </Route>
+          <div className={classes.root}>
+            <AppContextProvider
+              value={{
+                lang,
+                user,
+                snack,
+                language,
+                updateUser,
+                loginDialogOpened,
+                setLoginDialogOpened,
+              }}
+            >
+              <Switch>
+                <Route path="/blog/:row/:slug">
+                  <BlogPost />
+                </Route>
 
-              <Route path="/blog">
-                <Blog lang={lang} />
-              </Route>
+                <Route path="/blog">
+                  <Blog lang={lang} />
+                </Route>
 
-              <Route path="/">
-                {window.navigator.onLine ? (
-                  <MainPage
-                    lang={lang}
-                    user={user}
-                    snack={snack}
-                    language={language}
-                    updateUser={updateUser}
-                    setLoginDialogOpened={setLoginDialogOpened}
-                  />
-                ) : (
-                  <Container maxWidth="sm" className={classes.container}>
-                    <Typography
-                      gutterBottom
-                      variant="h6"
-                      component="h5"
-                      className={classes.text}
-                    >
-                      {lang.no_network}
-                    </Typography>
+                <Route path="/">
+                  {window.navigator.onLine ? (
+                    <MainPage
+                      lang={lang}
+                      user={user}
+                      snack={snack}
+                      language={language}
+                      updateUser={updateUser}
+                      setLoginDialogOpened={setLoginDialogOpened}
+                    />
+                  ) : (
+                    <Container maxWidth="sm" className={classes.container}>
+                      <Typography
+                        gutterBottom
+                        variant="h6"
+                        component="h5"
+                        className={classes.text}
+                      >
+                        {lang.no_network}
+                      </Typography>
 
-                    <Button
-                      color="secondary"
-                      variant="contained"
-                      className={classes.button}
-                      onClick={() => document.location.reload(true)}
-                    >
-                      {lang.retry}
-                    </Button>
-                  </Container>
-                )}
-              </Route>
-            </Switch>
-          </AppContextProvider>
+                      <Button
+                        color="secondary"
+                        variant="contained"
+                        className={classes.button}
+                        onClick={() => document.location.reload(true)}
+                      >
+                        {lang.retry}
+                      </Button>
+                    </Container>
+                  )}
+                </Route>
+              </Switch>
+            </AppContextProvider>
+          </div>
 
           <div className={classes.formControlContainer}>
             <FormControl>

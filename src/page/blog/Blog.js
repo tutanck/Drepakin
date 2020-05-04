@@ -7,7 +7,7 @@ import Sidebar from './Sidebar';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 
-import { head, news } from '../../static/resources/blog-post';
+import posts from '../../static/resources/blog-post';
 
 export default function Blog({ lang }) {
   return (
@@ -15,13 +15,13 @@ export default function Blog({ lang }) {
       <Header lang={lang} />
 
       <main>
-        <MainFeaturedPost post={head} lang={lang} />
+        <MainFeaturedPost post={posts.news[0]} lang={lang} />
 
         <Grid container spacing={4}>
           <Grid item xs={12} md={8}>
             <Grid container spacing={4}>
-              {news.map((post) => (
-                <FeaturedPost key={post.title} post={post} lang={lang} />
+              {posts.news.map((post) => (
+                <FeaturedPost key={post.slug} post={post} lang={lang} />
               ))}
             </Grid>
           </Grid>

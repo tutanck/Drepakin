@@ -21,7 +21,7 @@ export default function FeaturedPost({ post, lang }) {
 
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href={post.url}>
+      <CardActionArea component="a" href={`/blog/news/${post.slug}`}>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
             <CardContent>
