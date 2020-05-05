@@ -17,7 +17,14 @@ const pop = (array) => pick(array, 0);
 
 const noOp = () => {};
 
-const slug = (fileName) =>
-  path.basename(fileName, path.extname(fileName)).split('.')[0];
+const slug = (fileName, id) => {
+  const rawSlug = path.basename(fileName, path.extname(fileName)).split('.')[0];
+
+  if (id) {
+    return rawSlug + '-' + id;
+  }
+
+  return rawSlug;
+};
 
 export { ID, pick, pop, noOp, slug };
