@@ -15,7 +15,6 @@ Toute reproduction totale ou partielle des marques ou logos, effectuée à parti
 
 ## Conditions d’utilisation
 
-Tout lien avec ce site doit faire l’objet d’une autorisation préalable écrite de **drepakin.com** et ne pourra être réalisé que vers l’adresse de la page d’accueil du site [www.drepakin.com] avec l’intégration d’un logo.
 Malgré les soins apportés par **drepakin.com**, les informations contenues dans ce site sont données à titre indicatif et sont sujettes à changement sans préavis. En conséquence, l’utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.
 Il accepte les présentes conditions d’utilisation.
 Le site **drepakin.com** ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
