@@ -1,6 +1,6 @@
 # Le projet Drepakin
 
-#### 19 Juin 2020 par [Joan](https://twitter.com/tutanck)
+#### 19 Juin 2020 par Joan
 
 Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à accéder aux meilleurs soins possibles partout dans le monde.
 
