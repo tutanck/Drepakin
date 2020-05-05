@@ -17,7 +17,6 @@ Any total or partial reproduction of brands or logos, made from elements of the 
 
 ## Terms of use
 
-Any link to this site must be subject to prior written authorization from **drepakin.com** and can only be made to the address of the home page of the site [www.drepakin.com] with integration of a logo.
 Despite the care taken by **drepakin.com**, the information contained on this site is given for information only and is subject to change without notice.
 Consequently, the user acknowledges using this information under his exclusive responsibility.
 It accepts these terms of use.
