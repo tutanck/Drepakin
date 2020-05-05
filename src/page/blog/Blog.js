@@ -20,7 +20,7 @@ export default function Blog({ lang }) {
         <Grid container spacing={4}>
           <Grid item xs={12} md={8}>
             <Grid container spacing={4}>
-              {posts.news.map((post) => (
+              {posts.news.slice(1).map((post) => (
                 <FeaturedPost key={post.slug} post={post} lang={lang} />
               ))}
             </Grid>
