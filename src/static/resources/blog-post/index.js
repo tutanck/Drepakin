@@ -8,7 +8,7 @@ import { slug } from '../../../utils/toolbox';
 export default {
   news: [
     {
-      slug: slug(post1_fr),
+      slug: slug(post1_fr, 3687),
       date: '19 Juin 2020',
       image: scd,
       imageText: 'Sickle Cells',
@@ -18,7 +18,7 @@ export default {
       content: post1_fr,
     },
     {
-      slug: slug(post1_fr),
+      slug: slug(post1_fr, 3687),
       date: '19 Juin 2020',
       title: 'Le projet Drepakin 🇫🇷',
       description:
@@ -26,7 +26,7 @@ export default {
       content: post1_fr,
     },
     {
-      slug: slug(post1_en),
+      slug: slug(post1_en, 3688),
       date: 'June 19, 2020',
       title: 'The Drepakin project 🇬🇧',
       description:
@@ -34,7 +34,7 @@ export default {
       content: post1_en,
     },
     {
-      slug: slug(post2_fr),
+      slug: slug(post2_fr, 2565),
       date: '11 Mai 2020',
       title:
         'La drépanocytose - La maladie génétique la plus répandue dans le monde 🇫🇷',
@@ -43,7 +43,7 @@ export default {
       content: post2_fr,
     },
     {
-      slug: slug(post2_en),
+      slug: slug(post2_en, 2566),
       date: 'May 11, 2020',
       title:
         'Sickle Cell Disease - The most common genetic disease in the world 🇬🇧',
