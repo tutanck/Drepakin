@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  headerBtn: {
+    marginRight: theme.spacing(2),
+    marginLeft: theme.spacing(2),
+  },
 }));
 
 /* const sections = [{ title: 'Technology', url: '#' }]; */
@@ -32,26 +36,33 @@ export default function Header({ lang }) {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button
-          size="small"
-          color="secondary"
-          href="https://paypal.me/pools/c/8nXuBPoX1L"
-        >
-          {lang.support_us}
-        </Button>
-
         <Typography
           noWrap
           variant="h5"
           component="h2"
-          align="center"
+          align="left"
           color="inherit"
           className={classes.toolbarTitle}
         >
           Drepakin.com
         </Typography>
 
-        <Button variant="outlined" href="/app" size="small" color="primary">
+        <Button
+          size="small"
+          color="secondary"
+          className={classes.headerBtn}
+          href="https://paypal.me/pools/c/8nXuBPoX1L"
+        >
+          {lang.support_us}
+        </Button>
+
+        <Button
+          variant="outlined"
+          href="/app"
+          size="small"
+          color="primary"
+          className={classes.headerBtn}
+        >
           {lang.go_to_app}
         </Button>
       </Toolbar>
