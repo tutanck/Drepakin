@@ -182,11 +182,7 @@ export default function MainPage({
     <div>
       <DisclaimerDialog lang={lang} />
 
-      <AppBar
-        lang={lang}
-        name="Drepakin"
-        onPlaceChanged={handlePlaceChanged}
-      />
+      <AppBar lang={lang} name="Drepakin" onPlaceChanged={handlePlaceChanged} />
 
       <LoaderDialog open={isLoadingCenters} />
 
@@ -298,8 +294,8 @@ export default function MainPage({
                 total={pageCount}
                 disabled={isLoadingCenters}
                 onClick={(e, offset) => fetchCenters(offset + 1)}
-                previousPageLabel="Prec."
-                nextPageLabel="Suiv."
+                previousPageLabel="<"
+                nextPageLabel=">"
               />
             </Grid>
 
