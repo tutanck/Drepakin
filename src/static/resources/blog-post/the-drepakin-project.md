@@ -6,7 +6,7 @@ The Drepakin project aims to help patients with sickle cell anemia to access the
 
 ## The Drepakin app
 
-_[The Drepakin app](https://drepakin.com/app)_ helps you **find health centers that are experts in sickle cell disease**. You can ** search ** for expert centers in a country, city or near an address. You can also **rate** and **leave a review** on each health center. [Go to The App.](Https://drepakin.com/app)
+_[The Drepakin app](https://drepakin.com/app)_ helps you **find health centers that are experts in sickle cell disease**. You can **search** for expert centers in a country, city or near an address. You can also **rate** and **leave a review** on each health center. [Go to The App.](Https://drepakin.com/app)
 
 ## Help us help you
 

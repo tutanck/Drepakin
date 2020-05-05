@@ -10,6 +10,6 @@ La drépanocytose se manifeste notamment par une anémie chronique, des crises v
 
 La recherche a fait beaucoup de progrès ces dernières années et l'espérance de vie des personnes drépanocytaires a considérablement augmenté. Cependant les traitements actuels restent limités.
 
-Cette maladie bien qu'étant la maladie génétique la plus répandue en France et dans le monde est très souvent méconnue (y compris par de nombreux centres de santé).
+Cette maladie, bien qu'étant la maladie génétique la plus répandue en France et dans le monde, est très souvent méconnue (y compris par de nombreux centres de santé).
 
 [\>\>\> Plus d'information ici \<\<\<](https://www.inserm.fr/information-en-sante/dossiers-information/drepanocytose)
