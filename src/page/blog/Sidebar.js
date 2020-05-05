@@ -33,9 +33,15 @@ export default function Sidebar({ lang }) {
         </Typography>
       </Paper>
 
-      <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-        {lang.archives}
-      </Typography>
+      {posts.archives.length > 0 && (
+        <Typography
+          variant="h6"
+          gutterBottom
+          className={classes.sidebarSection}
+        >
+          {lang.archives}
+        </Typography>
+      )}
 
       {posts.archives.map(({ title, slug }) => (
         <Link
