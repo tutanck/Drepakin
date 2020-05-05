@@ -12,6 +12,14 @@ export default {
       date: '19 Juin 2020',
       image: scd,
       imageText: 'Sickle Cells',
+      title: 'Le projet Drepakin',
+      description:
+        "Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à accéder aux meilleurs soins possibles partout dans le monde.",
+      content: post1_fr,
+    },
+    {
+      slug: slug(post1_fr),
+      date: '19 Juin 2020',
       title: 'Le projet Drepakin 🇫🇷',
       description:
         "Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à accéder aux meilleurs soins possibles partout dans le monde.",
@@ -28,8 +36,6 @@ export default {
     {
       slug: slug(post2_fr),
       date: '11 Mai 2020',
-      image: scd,
-      imageText: 'Sickle Cells',
       title:
         'La drépanocytose - La maladie génétique la plus répandue dans le monde 🇫🇷',
       description:
