@@ -48,7 +48,7 @@ export default function Header({ lang }) {
           color="inherit"
           className={classes.toolbarTitle}
         >
-          Drepakin
+          Drepakin.com
         </Typography>
 
         <Button variant="outlined" href="/app" size="small" color="primary">
