@@ -184,7 +184,7 @@ export default function MainPage({
 
       <AppBar
         lang={lang}
-        name="Drepakin App"
+        name="Drepakin"
         onPlaceChanged={handlePlaceChanged}
       />
 
