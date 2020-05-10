@@ -188,7 +188,7 @@ export default function MainPage({
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
         <Button
-          href="/"
+          href="/blog"
           size="small"
           color="primary"
           className={classes.homeBtn}

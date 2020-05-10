@@ -35,7 +35,7 @@ function Content({ url }) {
 
   return (
     <div className={classes.root}>
-      <Button href="/" color="primary" className={classes.homeBtn}>
+      <Button href="/blog" color="primary" className={classes.homeBtn}>
         {'<<<'}
       </Button>
 
