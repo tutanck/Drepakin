@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     color: blueGrey[800],
     padding: theme.spacing(3, 3),
   },
-  welcomeBtn: {
+  homeBtn: {
     alignSelf: 'flex-start',
     fontWeight: 'bold',
   },
@@ -35,7 +35,7 @@ function Content({ url }) {
 
   return (
     <div className={classes.root}>
-      <Button href="/" color="primary" className={classes.welcomeBtn}>
+      <Button href="/" color="primary" className={classes.homeBtn}>
         {'<<<'}
       </Button>
 
