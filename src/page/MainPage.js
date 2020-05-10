@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     width: '100%',
   },
-  welcomeBtn: {
+  homeBtn: {
     alignSelf: 'flex-start',
     margin: 16,
   },
@@ -188,12 +188,12 @@ export default function MainPage({
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
         <Button
-          href="/"
+          href="/blog"
           size="small"
           color="primary"
-          className={classes.welcomeBtn}
+          className={classes.homeBtn}
         >
-          {lang.welcome}
+          {lang.home}
         </Button>
 
         {user && user.is_admin && (

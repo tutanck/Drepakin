@@ -123,7 +123,15 @@ export default function App() {
               }}
             >
               <Switch>
-                <Route path="/app">
+                <Route path="/blog/:row/:slug">
+                  <BlogPost />
+                </Route>
+
+                <Route path="/blog">
+                  <Blog lang={lang} />
+                </Route>
+
+                <Route path="/">
                   {window.navigator.onLine ? (
                     <MainPage
                       lang={lang}
@@ -154,14 +162,6 @@ export default function App() {
                       </Button>
                     </Container>
                   )}
-                </Route>
-
-                <Route path="/blog/:row/:slug">
-                  <BlogPost />
-                </Route>
-
-                <Route path="/">
-                  <Blog lang={lang} />
                 </Route>
               </Switch>
             </AppContextProvider>
