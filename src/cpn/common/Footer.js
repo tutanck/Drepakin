@@ -318,7 +318,7 @@ export default function StickyFooter({ lang, language }) {
       <footer className={classes.footer}>
         <Container className={classes.footerContainer}>
           <Typography variant="body2" color="textSecondary">
-            Copyright © Drepakin 2020
+            Copyright © Drepakin {new Date().getFullYear()}
           </Typography>
         </Container>
       </footer>
