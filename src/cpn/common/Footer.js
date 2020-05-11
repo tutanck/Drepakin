@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   importantLink: {
-    fontSize: '20px',
+    fontSize: '16px',
     fontWeight: 'bold',
     textTransform: 'uppercase',
   },
