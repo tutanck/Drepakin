@@ -108,9 +108,7 @@ const useStyles = makeStyles((theme) => ({
   importantLink: {
     fontSize: '20px',
     fontWeight: 'bold',
-    color: lightBlue[400],
     textTransform: 'uppercase',
-    textDecoration: 'underline',
   },
   normalLink: {
     textTransform: 'none',
@@ -125,7 +123,10 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
   spaceUp: {
-    marginTop: 12,
+    marginTop: 16,
+  },
+  blue: {
+    color: lightBlue[400],
   },
 }));
 
@@ -157,7 +158,6 @@ export default function StickyFooter({ lang, language }) {
         <Grid
           item
           xs={12}
-          md={3}
           className={clsx(classes.block, classes.callToActionBlock)}
         >
           <div className={classes.blockTitle}>{lang.help_us_help_you}</div>
@@ -173,7 +173,7 @@ export default function StickyFooter({ lang, language }) {
                   className={clsx(
                     classes.link,
                     classes.importantLink,
-                    classes.spaceUp,
+                    classes.blue,
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -182,17 +182,17 @@ export default function StickyFooter({ lang, language }) {
                   {lang.help_us_reference}
                 </a>
               </li>
-              <li>
+              <li className={clsx(classes.spaceUp)}>
                 <Button
-                  className={clsx(classes.link, classes.spaceUp)}
+                  className={clsx(classes.link, classes.importantLink)}
                   onClick={() => setAboutDialogOpened(true)}
                 >
                   {lang.about_drepakin}
                 </Button>
               </li>
-              <li>
+              <li className={clsx(classes.spaceUp)}>
                 <a
-                  className={classes.link}
+                  className={clsx(classes.link, classes.importantLink)}
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://paypal.me/pools/c/8nXuBPoX1L"
@@ -200,9 +200,9 @@ export default function StickyFooter({ lang, language }) {
                   {lang.support_us}
                 </a>
               </li>
-              <li>
+              <li className={clsx(classes.spaceUp)}>
                 <a
-                  className={classes.link}
+                  className={clsx(classes.link, classes.importantLink)}
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/tutanck/Drepakin"
@@ -215,7 +215,7 @@ export default function StickyFooter({ lang, language }) {
           </div>
         </Grid>
 
-        <Grid item xs={12} sm={4} md={3} className={classes.block}>
+        <Grid item xs={12} sm={4} className={classes.block}>
           <div className={classes.blockTitle}>{lang.contact}</div>
           <ul className={classes.list}>
             <li>
@@ -241,7 +241,7 @@ export default function StickyFooter({ lang, language }) {
           </ul>
         </Grid>
 
-        <Grid item xs={12} sm={4} md={3} className={classes.block}>
+        <Grid item xs={12} sm={4} className={classes.block}>
           <div className={classes.blockTitle}>{lang.legal}</div>
           <ul className={classes.list}>
             <li>
@@ -271,7 +271,7 @@ export default function StickyFooter({ lang, language }) {
           </ul>
         </Grid>
 
-        <Grid item xs={12} sm={4} md={3} className={classes.block}>
+        <Grid item xs={12} sm={4} className={classes.block}>
           <div className={classes.blockTitle}>{lang.stay_tuned}</div>
           <div>
             <a
@@ -306,8 +306,6 @@ export default function StickyFooter({ lang, language }) {
         <Grid
           item
           xs={12}
-          sm={12}
-          md={12}
           className={clsx(classes.block, classes.sponsorsBlock)}
         >
           <div className={classes.blockTitle}>{lang.special_thanks}</div>
