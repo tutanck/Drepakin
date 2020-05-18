@@ -131,7 +131,7 @@ export default function App() {
                   <Blog lang={lang} />
                 </Route>
 
-                <Route path="/">
+                <Route path="/xyz">
                   {window.navigator.onLine ? (
                     <MainPage
                       lang={lang}
@@ -162,6 +162,10 @@ export default function App() {
                       </Button>
                     </Container>
                   )}
+                </Route>
+
+                <Route path="/">
+                  <Blog lang={lang} />
                 </Route>
               </Switch>
             </AppContextProvider>
