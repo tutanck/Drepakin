@@ -3,8 +3,10 @@ import { Redirect, useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import Markdown from '../cpn/common/Markdown';
-import posts from '../static/resources/blog-post';
+import blogPosts from '../static/resources/blog-post';
 import { Button } from '@material-ui/core';
+import { getIdFromSlug } from '../utils/toolbox';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +38,7 @@ function Content({ url }) {
   return (
     <div className={classes.root}>
       <Button href="/blog" color="primary" className={classes.homeBtn}>
-        {'<<<'}
+        <ArrowBackIcon fontSize="large" />
       </Button>
 
       <Markdown className={classes.markdown}>{content}</Markdown>
@@ -44,16 +46,26 @@ function Content({ url }) {
   );
 }
 
-export default function BlogPost() {
+export default function BlogPost({ language }) {
+  const langBlogPosts = blogPosts[language];
+
   const { row, slug } = useParams();
+
+  const id = getIdFromSlug(slug);
+
+  const parsedId = parseInt(id);
 
   let post;
 
-  const drawer = posts[row];
+  const drawer = langBlogPosts[row];
+
+  console.log('===============sid=====================');
+  console.log(slug, id, '=?', parsedId, drawer); //TODO rem
+  console.log('====================================');
 
   if (drawer) {
-    post = drawer.find((p) => p.slug === slug);
+    post = drawer.find((p) => p.id === parsedId);
   }
 
-  return post ? <Content url={post.content} /> : <Redirect to="/" />;
+  return post ? <Content url={post.content} /> : <Redirect to="/404" />;
 }

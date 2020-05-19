@@ -27,6 +27,7 @@ import SnackBar from './cpn/bar/SnackBar';
 import Blog from './page/blog/Blog';
 import BlogPost from './page/BlogPost';
 import MainPage from './page/MainPage';
+import NotFound from './page/NotFound';
 import Footer from './cpn/common/Footer';
 import { ID } from './utils/toolbox';
 import * as Sentry from '@sentry/browser';
@@ -123,8 +124,16 @@ export default function App() {
               }}
             >
               <Switch>
+                <Route exact path="/">
+                  <Blog lang={lang} language={language} />
+                </Route>
+
                 <Route path="/blog/:row/:slug">
-                  <BlogPost />
+                  <BlogPost language={language} />
+                </Route>
+
+                <Route path="/blog">
+                  <Blog lang={lang} language={language} />
                 </Route>
 
                 <Route path="/xyz">
@@ -160,8 +169,12 @@ export default function App() {
                   )}
                 </Route>
 
-                <Route path="/">
-                  <Blog lang={lang} />
+                <Route path="/404">
+                  <NotFound lang={lang} language={language} />
+                </Route>
+
+                <Route>
+                  <NotFound lang={lang} language={language} />
                 </Route>
               </Switch>
             </AppContextProvider>

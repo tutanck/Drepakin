@@ -17,14 +17,23 @@ const pop = (array) => pick(array, 0);
 
 const noOp = () => {};
 
-const slug = (fileName, id) => {
-  const rawSlug = path.basename(fileName, path.extname(fileName)).split('.')[0];
+const slugSeparator = '-';
 
-  if (id) {
-    return rawSlug + '-' + id;
+const slugify = (fileName, id) => {
+  if (!(id && Number.isInteger(id))) {
+    throw new Error('UNABLE_TO_SLUGIFY_WITHOUT_VALID_ID');
   }
 
-  return rawSlug;
+  const tmp = path.basename(fileName, path.extname(fileName)).split('.')[0];
+
+  const slug = tmp + slugSeparator + id;
+
+  return slug;
 };
 
-export { ID, pick, pop, noOp, slug };
+const getIdFromSlug = (slug) => {
+  const id = slug.split(slugSeparator).pop();
+  return id;
+};
+
+export { ID, pick, pop, noOp, slugify, getIdFromSlug };
