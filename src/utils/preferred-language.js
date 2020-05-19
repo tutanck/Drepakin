@@ -14,13 +14,12 @@ const loadPreferredLanguage = () => {
   return preferredLanguage;
 };
 
-const storePreferredLanguage = preferredLanguage => {
+const storePreferredLanguage = (preferredLanguage) => {
   if (!isLocalStorageAvailable()) {
     return;
   }
   if (!supportedLanguages[preferredLanguage]) {
-    // eslint-disable-next-line no-throw-literal
-    throw 'UNSUPPORTED_LANGUAGE';
+    throw new Error('UNSUPPORTED_LANGUAGE');
   }
 
   localStorage.setItem(

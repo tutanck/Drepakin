@@ -124,7 +124,7 @@ export default function App() {
             >
               <Switch>
                 <Route path="/blog/:row/:slug">
-                  <BlogPost />
+                  <BlogPost language={language} />
                 </Route>
 
                 <Route path="/xyz">
@@ -161,7 +161,7 @@ export default function App() {
                 </Route>
 
                 <Route path="/">
-                  <Blog lang={lang} />
+                  <Blog lang={lang} language={language} />
                 </Route>
               </Switch>
             </AppContextProvider>

@@ -5,7 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import posts from '../../static/resources/blog-post';
+import blogPosts from '../../static/resources/blog-post';
+import { slugify } from '../../utils/toolbox';
 
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
@@ -18,8 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Sidebar({ lang }) {
+export default function Sidebar({ lang, language }) {
   const classes = useStyles();
+
+  const langBlogPosts = blogPosts[language];
 
   return (
     <Grid item xs={12} md={4}>
@@ -33,7 +36,7 @@ export default function Sidebar({ lang }) {
         </Typography>
       </Paper>
 
-      {posts.archives.length > 0 && (
+      {langBlogPosts.archives.length > 0 && (
         <Typography
           variant="h6"
           gutterBottom
@@ -43,16 +46,20 @@ export default function Sidebar({ lang }) {
         </Typography>
       )}
 
-      {posts.archives.map(({ title, slug }) => (
-        <Link
-          key={slug}
-          display="block"
-          variant="body1"
-          href={`/blog/archives/${slug}`}
-        >
-          {title}
-        </Link>
-      ))}
+      {langBlogPosts.archives.map(({ title, content, id }) => {
+        const slug = slugify(content, id);
+
+        return (
+          <Link
+            key={slug}
+            display="block"
+            variant="body1"
+            href={`/blog/archives/${slug}`}
+          >
+            {title}
+          </Link>
+        );
+      })}
     </Grid>
   );
 }

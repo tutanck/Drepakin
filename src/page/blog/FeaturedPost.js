@@ -8,6 +8,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
+import { slugify } from '../../utils/toolbox';
 
 const useStyles = makeStyles({
   card: {
@@ -21,39 +22,44 @@ const useStyles = makeStyles({
   },
 });
 
-export default function FeaturedPost({ post, lang }) {
+export default function FeaturedPost({
+  post: { id, date, title, description, content, image, imageText },
+  lang: { continue_reading },
+}) {
   const classes = useStyles();
+
+  const slug = slugify(content, id);
 
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href={`/blog/news/${post.slug}`}>
+      <CardActionArea component="a" href={`/blog/news/${slug}`}>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
             <CardContent>
               <Typography component="h2" variant="h5">
-                {post.title}
+                {title}
               </Typography>
 
               <Typography variant="subtitle1" color="textSecondary">
-                {post.date}
+                {date}
               </Typography>
 
               <Typography variant="subtitle1" paragraph>
-                {post.description}
+                {description}
               </Typography>
 
               <Typography variant="subtitle1" color="primary">
-                {lang.continue_reading}
+                {continue_reading}
               </Typography>
             </CardContent>
           </div>
 
-          {post.image && (
+          {image && (
             <Hidden xsDown>
               <CardMedia
                 className={classes.cardMedia}
-                image={post.image}
-                title={post.imageText}
+                image={image}
+                title={imageText}
               />
             </Hidden>
           )}

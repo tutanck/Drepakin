@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import { slugify } from '../../utils/toolbox';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -38,46 +39,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MainFeaturedPost({ post, lang }) {
+export default function MainFeaturedPost({
+  post: { id, title, description, content, image, imageText },
+  lang: { continue_reading },
+}) {
   const classes = useStyles();
+
+  const slug = slugify(content, id);
 
   return (
     <Paper
       className={classes.mainFeaturedPost}
-      style={{ backgroundImage: `url(${post.image})` }}
+      style={{ backgroundImage: `url(${image})` }}
     >
       {/* Increase the priority of the hero background image */}
-      {
-        <img
-          style={{ display: 'none' }}
-          src={post.image}
-          alt={post.imageText}
-        />
-      }
+      {<img style={{ display: 'none' }} src={image} alt={imageText} />}
       <div className={classes.overlay} />
 
       <Grid container>
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
             <Typography
-              component="h1"
-              variant="h3"
-              color="inherit"
               gutterBottom
+              variant="h3"
+              component="h1"
+              color="inherit"
             >
-              {post.title}
+              {title}
             </Typography>
 
             <Typography variant="h5" color="inherit" paragraph>
-              {post.description}
+              {description}
             </Typography>
 
             <Link
               variant="subtitle1"
-              href={`/blog/news/${post.slug}`}
+              href={`/blog/news/${slug}`}
               className={classes.mainFeaturedPostLink}
             >
-              {lang.continue_reading}
+              {continue_reading}
             </Link>
           </div>
         </Grid>

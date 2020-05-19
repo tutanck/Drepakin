@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import PropTypes from 'prop-types';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   success: {
     backgroundColor: theme.status.success,
   },
@@ -39,7 +39,7 @@ export default function StatusSnackbar({
     }
   }, [triggerId]);
 
-  console.log('StatusSnackbar', message, variant, open); //TODO REM
+  console.log('StatusSnackbar', message, variant, open); //TODO rem
 
   function handleClose(event, reason) {
     if (reason === 'clickaway') {

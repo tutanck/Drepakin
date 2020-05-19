@@ -6,27 +6,35 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
+import blogPosts from '../../static/resources/blog-post';
+import { slugify } from '../../utils/toolbox';
 
-import posts from '../../static/resources/blog-post';
+export default function Blog({ lang, language }) {
+  const langBlogPosts = blogPosts[language];
 
-export default function Blog({ lang }) {
+  const headPost = langBlogPosts.news[0];
+
   return (
     <Container maxWidth="lg">
       <Header lang={lang} />
 
       <main>
-        <MainFeaturedPost post={posts.news[0]} lang={lang} />
+        <MainFeaturedPost post={headPost} lang={lang} />
 
         <Grid container spacing={4}>
           <Grid item xs={12} md={8}>
             <Grid container spacing={4}>
-              {posts.news.slice(1).map((post) => (
-                <FeaturedPost key={post.slug} post={post} lang={lang} />
+              {langBlogPosts.news.map((post) => (
+                <FeaturedPost
+                  key={slugify(post.content, post.id)}
+                  post={post}
+                  lang={lang}
+                />
               ))}
             </Grid>
           </Grid>
 
-          <Sidebar lang={lang} />
+          <Sidebar lang={lang} language={language} />
         </Grid>
       </main>
     </Container>
