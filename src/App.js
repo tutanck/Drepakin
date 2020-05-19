@@ -127,10 +127,6 @@ export default function App() {
                   <BlogPost />
                 </Route>
 
-                <Route path="/blog">
-                  <Blog lang={lang} />
-                </Route>
-
                 <Route path="/xyz">
                   {window.navigator.onLine ? (
                     <MainPage
