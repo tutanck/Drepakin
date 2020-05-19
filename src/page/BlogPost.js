@@ -67,5 +67,5 @@ export default function BlogPost({ language }) {
     post = drawer.find((p) => p.id === parsedId);
   }
 
-  return post ? <Content url={post.content} /> : <Redirect to="/" />;
+  return post ? <Content url={post.content} /> : <Redirect to="/404" />;
 }
