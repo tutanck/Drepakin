@@ -136,5 +136,8 @@
   "archives": "Archives",
   "continue_reading": "Read further...",
   "go_to_app": "Go to App",
-  "home": "Home"
+  "home": "Home",
+  "page_not_found": "Page not found",
+  "page_not_found_explanation": "The page you are looking for might have been removed, had its name changed or is temporarily unavailable.",
+  "go_to_homepage": "Go To Homepage"
 }

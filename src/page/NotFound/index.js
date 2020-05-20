@@ -23,12 +23,9 @@ export default function NotFound({ lang }) {
           <h1>Oops!</h1>
         </div>
 
-        <h2>404 - Page not found</h2>
+        <h2>404 - {lang.page_not_found}</h2>
 
-        <p>
-          The page you are looking for might have been removed had its name
-          changed or is temporarily unavailable.
-        </p>
+        <p>{lang.page_not_found_explanation}</p>
 
         <Button
           href="/"
@@ -36,7 +33,7 @@ export default function NotFound({ lang }) {
           color="secondary"
           className={classes.homeBtn}
         >
-          Go To Homepage
+          {lang.go_to_homepage}
         </Button>
       </div>
     </div>

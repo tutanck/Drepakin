@@ -19,7 +19,7 @@
 }
 
 .notfound .notfound-404 {
-  height: 280px;
+  height: 292px;
   position: relative;
   z-index: -1;
 }
@@ -53,7 +53,7 @@
 .notfound p {
   font-family: 'Montserrat', sans-serif;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 20px;
   margin-top: 0px;
