@@ -277,6 +277,7 @@ export default function MainPage({
                   user={user}
                   lang={lang}
                   center={center}
+                  language={language}
                   onServerCallError={onServerCallError}
                 />
               </Grid>
