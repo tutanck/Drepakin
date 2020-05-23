@@ -16,6 +16,8 @@ import LocatorDialog from '../dialog/LocatorDialog';
 import CenterSchema from '../../validation/CensterSchema';
 import { evaluate } from '../../utils/rate-evaluation';
 import { getFlag } from '../../utils/get-flag';
+import supportedLanguages from '../../utils/supported-languages';
+import { countries } from '../../static/resources/geo';
 import ERN from '../../static/assets/ERN.png';
 import RC from '../../static/assets/reference-center.gif';
 import CS from '../../static/assets/CS.png';
@@ -51,7 +53,7 @@ import {
   MyLocation,
 } from '@material-ui/icons';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 640,
     margin: 'auto',
@@ -165,7 +167,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CenterCard({ user, lang, center, onServerCallError }) {
+export default function CenterCard({
+  user,
+  lang,
+  language,
+  center,
+  onServerCallError,
+}) {
   const classes = useStyles();
 
   const [
@@ -210,7 +218,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
 
   const [menuAnchorEl, setMenuAnchorEl] = React.useState(null);
 
-  const handleOpenMenu = event => {
+  const handleOpenMenu = (event) => {
     setMenuAnchorEl(event.currentTarget);
   };
 
@@ -233,7 +241,10 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
         title={hospital}
         subheader={
           <small>
-            {country} &bull; {region} &bull; {city}
+            {language === supportedLanguages.fr_FR.key
+              ? countries[country]
+              : country}{' '}
+            &bull; {region} &bull; {city}
           </small>
         }
         avatar={
@@ -426,7 +437,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
             onRateSubmit={updateCard}
             prevRate={user_rate}
           >
-            {props => (
+            {(props) => (
               <Tooltip title={lang.rate}>
                 <span>
                   <IconButton {...props} color="primary" aria-label={lang.rate}>
@@ -439,7 +450,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
           </RaterDialog>
 
           <CommentsDialog centerId={_id} onCommentSubmit={updateCard}>
-            {props => (
+            {(props) => (
               <Tooltip title={lang.comments}>
                 <span>
                   <IconButton
@@ -466,7 +477,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
                 onDataLoadingError={onServerCallError}
                 onSubmitError={onServerCallError}
                 fetchFn={async () => get(`/centers/admin/details/by/${_id}`)}
-                pushFn={async center =>
+                pushFn={async (center) =>
                   put(`/centers/admin/update/${_id}`, { data: center })
                 }
                 features={[
@@ -476,7 +487,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
                       onLocationSelected={liftDataUp}
                       key="EditorDialog-LocatorDialog"
                     >
-                      {props => (
+                      {(props) => (
                         <Fab
                           {...props}
                           size="small"
@@ -493,7 +504,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
                   ),
                 ]}
               >
-                {props => (
+                {(props) => (
                   <Tooltip title={lang.edit_center}>
                     <span>
                       <IconButton
@@ -631,7 +642,7 @@ export default function CenterCard({ user, lang, center, onServerCallError }) {
           <Typography paragraph>
             <b>{lang.phone} : </b>
             <br />
-            {phones.map(phone => (
+            {phones.map((phone) => (
               <span key={phone}>
                 <Link
                   target="_blank"
