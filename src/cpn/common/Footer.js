@@ -9,9 +9,9 @@ import { Grid, Button } from '@material-ui/core';
 import { lightBlue } from '@material-ui/core/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faFacebook,
+  /* faFacebook, */
   faInstagram,
-  /* faWhatsappSquare, */
+  faWhatsapp,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import Z from '../../static/assets/Z.png';
@@ -274,23 +274,23 @@ export default function StickyFooter({ lang, language }) {
         <Grid item xs={12} sm={4} className={classes.block}>
           <div className={classes.blockTitle}>{lang.stay_tuned}</div>
           <div>
-            <a
+            {/*  <a
               className={clsx(classes.socialNetworkIcon, classes.facebook)}
               href="https://www.facebook.com/hashtag/drepakin"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon size="3x" icon={faFacebook} />
-            </a>
+            </a> */}
 
-            {/*  <a
+            <a
               className={clsx(classes.socialNetworkIcon, classes.whatsapp)}
               href="https://web.whatsapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon size="3x" icon={faWhatsappSquare} />
-            </a> */}
+              <FontAwesomeIcon size="3x" icon={faWhatsapp} />
+            </a>
 
             <a
               className={clsx(classes.socialNetworkIcon, classes.instagram)}
@@ -310,7 +310,13 @@ export default function StickyFooter({ lang, language }) {
         >
           <div className={classes.blockTitle}>{lang.special_thanks}</div>
           <div className={classes.sponsorsContent}>
-            <img src={Z} className={classes.imgIcon} alt={'Z'} />
+            <a
+              target="_blank"
+              href="https://www.zenika.com"
+              rel="noopener noreferrer"
+            >
+              <img src={Z} className={classes.imgIcon} alt={'Zenika'} />
+            </a>
           </div>
         </Grid>
       </Grid>
