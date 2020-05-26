@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Hidden } from '@material-ui/core';
 /* import Link from '@material-ui/core/Link'; */
 
 const useStyles = makeStyles((theme) => ({
@@ -36,16 +37,18 @@ export default function Header({ lang }) {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Typography
-          noWrap
-          variant="h5"
-          component="h2"
-          align="left"
-          color="inherit"
-          className={classes.toolbarTitle}
-        >
-          Drepakin.com
-        </Typography>
+        <Hidden xsDown>
+          <Typography
+            noWrap
+            variant="h5"
+            component="h2"
+            align="left"
+            color="inherit"
+            className={classes.toolbarTitle}
+          >
+            Drepakin.com
+          </Typography>
+        </Hidden>
 
         <Button
           size="small"
