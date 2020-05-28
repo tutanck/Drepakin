@@ -136,7 +136,7 @@ export default function App() {
                   <Blog lang={lang} language={language} />
                 </Route>
 
-                <Route path="/xyz">
+                <Route path="/app">
                   {window.navigator.onLine ? (
                     <MainPage
                       lang={lang}
