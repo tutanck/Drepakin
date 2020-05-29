@@ -23,7 +23,7 @@ export default {
       date: '01 Juin 2020',
       title: "L'application Drepakin: Comment ça marche ?",
       description:
-        "L'application Drepakin vous aide à trouver des centres de santé experts de la drépanocytose. Vous pouvez rechercher les centres experts d'un pays, d'une ville ou à proximité d'une adresse. Vous pouvez également noter et laisser un avis sur chaque centre de santé.",
+        "L'application Drepakin vous aide à trouver des centres de santé experts de la drépanocytose.",
       content: post3_fr,
     },
     {

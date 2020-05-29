@@ -1,20 +1,37 @@
 # L'application Drepakin: Comment ça marche ?
 
-#### 01 Juin 2020 par Joan
+#### 01 Juin 2020 par Regina
 
-_[L'application Drepakin](https://drepakin.com/app)_ vous aide à **trouver des centres de santé experts de la drépanocytose**. Vous pouvez **rechercher** les centres experts d'un pays, d'une ville ou à proximité d'une adresse. Vous pouvez également **noter** et **laisser un avis** sur chaque centre de santé. [Aller à L'App.](https://drepakin.com/app)
+_[L'application Drepakin](https://drepakin.com/app)_ t'aide à **trouver des centres de santé experts de la drépanocytose** partout dans le monde.
+
+Par défaut l'application te propose les centres les plus proches de ta position. Mais lorsque tu lances une recherche, l'application va retrouver les centres les plus proches du lieu que tu as recherché. Tu peux **rechercher** les centres experts d'un pays, d'une ville ou à proximité d'une adresse. Pratique lorsque tu es en déplacement.
+
+Tu peux également **noter** et **laisser un avis** sur chaque centre de santé.
 
 ## Comment ça marche ?
 
-## Aidez-nous à vous aider
+1. L'équipe de Drepakin s'occupe de récenser de nombreux centres de santé experts de la drépanocytose à travers le monde. Tu peux également nous **suggérer des centres** [ICI](https://forms.gle/3uAx23WSaCDVkduE6).
 
-L'implication des patients drépanocytaires et leur entourage est cruciale.
-Aidez nous à cartographier la prise en charge de la drépanocytose !
+2. Une fois approuvés, les centres de santé seront visibles sur l'application 🎉🎉🎉.
 
-Vous connaissez un centre de santé qui n'apparaît pas sur Drepakin ? [Aidez-nous à le référencer !](https://forms.gle/3uAx23WSaCDVkduE6)
+3. Tu pourras alors **donner une note et laisser un avis sur les centres que tu as l'habitude de fréquenter**. Cela rassurera les autres patients sur la qualité de la prise en charge dans un centre.
 
-Vous pouvez aussi [nous soutenir.](https://paypal.me/pools/c/8nXuBPoX1L)
+## Tu ne trouves pas un centre sur Drepakin ?
 
-Vous avez rencontré un problème, un bug ou bien une incohérence sur un centre de santé ? [Signalez-le nous !](mailto:drepakin@gmail.com)
+Tu peux toujours nous suggérer les centres qui prennent en charge la drépanocytose [ICI](https://forms.gle/3uAx23WSaCDVkduE6).
 
-Vous avez des suggestions d'améliorations ou des idées ? [Écrivez-nous !](mailto:drepakin@gmail.com)
+## Tu as remarqué une erreur ou une incohérence sur un ou plusieurs centres de santé ?
+
+Tu peux nous le signaler [ICI](mailto:drepakin@gmail.com).
+
+## Tu as rencontré des problèmes ou des bugs sur l'application ?
+
+Tu peux encore nous le signaler [ICI](mailto:drepakin@gmail.com).
+
+Tu peux aussi nous partager tes idées ou nous faires des suggestions [ICI](mailto:drepakin@gmail.com).
+
+## Je veux soutenir Drepakin !
+
+Si tu le souhaites tu peux nous soutenir [ICI](https://paypal.me/pools/c/8nXuBPoX1L).
+
+[Ouvrir l'application Drepakin](https://drepakin.com/app).
