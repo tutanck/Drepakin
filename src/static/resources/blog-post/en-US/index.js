@@ -23,7 +23,7 @@ export default {
       date: 'June 01, 2020',
       title: 'The Drepakin App: How it works ?',
       description:
-        'The Drepakin app helps you find health centers that are experts in sickle cell disease. You can search for expert centers in a country, city or near an address. You can also rate and leave a review on each health center.',
+        'The Drepakin app helps you find health centers that are experts in sickle cell disease.',
       content: post3_en,
     },
     {
