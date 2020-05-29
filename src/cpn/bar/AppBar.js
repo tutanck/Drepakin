@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   select: {
     color: 'black',
     fontSize: '16px',
-    fontWeight: 'bold',
+    
   },
 }));
 
