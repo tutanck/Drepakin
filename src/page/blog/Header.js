@@ -4,8 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Hidden } from '@material-ui/core';
+import { Hidden, FormControl, Select, MenuItem } from '@material-ui/core';
 /* import Link from '@material-ui/core/Link'; */
+import supportedLanguages from '../../utils/supported-languages';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 /* const sections = [{ title: 'Technology', url: '#' }]; */
 
-export default function Header({ lang }) {
+export default function Header({ lang, language, updateLanguage }) {
   const classes = useStyles();
 
   return (
@@ -46,7 +47,19 @@ export default function Header({ lang }) {
             color="inherit"
             className={classes.toolbarTitle}
           >
-            Drepakin.com
+            Drepakin.com /{' '}
+            <FormControl>
+              <Select
+                value={language}
+                onChange={(e) => updateLanguage(e.target.value)}
+              >
+                {Object.keys(supportedLanguages).map((key) => (
+                  <MenuItem key={key} value={key}>
+                    {supportedLanguages[key].display}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
           </Typography>
         </Hidden>
 
@@ -90,4 +103,6 @@ export default function Header({ lang }) {
 
 Header.propTypes = {
   lang: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired,
+  updateLanguage: PropTypes.func.isRequired,
 };

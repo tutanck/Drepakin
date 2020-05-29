@@ -5,7 +5,7 @@ import { Grid, Button, Fab, Hidden } from '@material-ui/core';
 import { Edit, People } from '@material-ui/icons';
 import EditorDialog from '../cpn/dialog/EditorDialog';
 import UsersDialog from '../cpn/dialog/UsersDialog';
-import { red } from '@material-ui/core/colors';
+import { red, indigo } from '@material-ui/core/colors';
 import Pagination from 'material-ui-flat-pagination';
 import CenterCard from '../cpn/card/CenterCard';
 import { get, post } from '../utils/api-client';
@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   indication: { color: red[900] },
+  primeIndication: { color: indigo[900] },
   adminBtn: {
     width: '300px',
     display: 'flex',
@@ -73,6 +74,7 @@ export default function MainPage({
   snack,
   language,
   updateUser,
+  updateLanguage,
   setLoginDialogOpened,
 }) {
   const classes = useStyles();
@@ -182,7 +184,13 @@ export default function MainPage({
     <div>
       <DisclaimerDialog lang={lang} />
 
-      <AppBar lang={lang} name="Drepakin" onPlaceChanged={handlePlaceChanged} />
+      <AppBar
+        name="Drepakin"
+        lang={lang}
+        language={language}
+        updateLanguage={updateLanguage}
+        onPlaceChanged={handlePlaceChanged}
+      />
 
       <LoaderDialog open={isLoadingCenters} />
 
@@ -271,6 +279,24 @@ export default function MainPage({
         )}
         {centers.length > 0 && (
           <Grid container spacing={3}>
+            <Grid item xs={12} key={'primeIndication'}>
+              <span className={classes.primeIndication}>
+                {lang.you_know_more_centers}
+              </span>
+            </Grid>
+
+            <Grid item xs={12} key={'primeCallToAction'}>
+              <Button
+                color={'primary'}
+                variant="outlined"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={googleForms[language]}
+              >
+                {lang.add_it_to_drepakin}
+              </Button>
+            </Grid>
+
             {centers.map((center) => (
               <Grid item key={center._id} xs={12}>
                 <CenterCard
@@ -348,6 +374,7 @@ MainPage.propTypes = {
   lang: PropTypes.object.isRequired,
   language: PropTypes.string.isRequired,
   updateUser: PropTypes.func.isRequired,
+  updateLanguage: PropTypes.func.isRequired,
   setLoginDialogOpened: PropTypes.func.isRequired,
   user: PropTypes.object,
 };

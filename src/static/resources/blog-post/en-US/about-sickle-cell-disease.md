@@ -1,6 +1,6 @@
 # Sickle Cell Disease - The most common genetic disease in the world
 
-#### May 11, 2020 by Hapsatou
+#### May 31, 2020 by Hapsatou
 
 **Sickle Cell Disease** also known as sickle cell anemia is an inherited genetic disorder that affects the hemoglobin in red blood cells.
 

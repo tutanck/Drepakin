@@ -9,12 +9,12 @@ import FeaturedPost from './FeaturedPost';
 import blogPosts from '../../static/resources/blog-post';
 import { slugify } from '../../utils/toolbox';
 
-export default function Blog({ lang, language }) {
+export default function Blog({ lang, language, updateLanguage }) {
   const langBlogPosts = blogPosts[language];
 
   return (
     <Container maxWidth="lg">
-      <Header lang={lang} />
+      <Header lang={lang} language={language} updateLanguage={updateLanguage} />
 
       <main>
         <MainFeaturedPost post={langBlogPosts.head} lang={lang} />
@@ -41,4 +41,6 @@ export default function Blog({ lang, language }) {
 
 Blog.propTypes = {
   lang: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired,
+  updateLanguage: PropTypes.func.isRequired,
 };

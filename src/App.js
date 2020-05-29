@@ -119,13 +119,18 @@ export default function App() {
                 snack,
                 language,
                 updateUser,
+                updateLanguage,
                 loginDialogOpened,
                 setLoginDialogOpened,
               }}
             >
               <Switch>
                 <Route exact path="/">
-                  <Blog lang={lang} language={language} />
+                  <Blog
+                    lang={lang}
+                    language={language}
+                    updateLanguage={updateLanguage}
+                  />
                 </Route>
 
                 <Route path="/blog/:row/:slug">
@@ -133,7 +138,11 @@ export default function App() {
                 </Route>
 
                 <Route path="/blog">
-                  <Blog lang={lang} language={language} />
+                  <Blog
+                    lang={lang}
+                    language={language}
+                    updateLanguage={updateLanguage}
+                  />
                 </Route>
 
                 <Route path="/app">
@@ -144,6 +153,7 @@ export default function App() {
                       snack={snack}
                       language={language}
                       updateUser={updateUser}
+                      updateLanguage={updateLanguage}
                       setLoginDialogOpened={setLoginDialogOpened}
                     />
                   ) : (
