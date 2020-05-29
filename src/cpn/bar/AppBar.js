@@ -21,11 +21,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     display: 'block',
   },
-  select: {
-    color: 'black',
-    fontSize: '16px',
-    
-  },
 }));
 
 export default function MainAppBar({
@@ -46,7 +41,6 @@ export default function MainAppBar({
             <FormControl>
               <Select
                 value={language}
-                className={classes.select}
                 onChange={(e) => updateLanguage(e.target.value)}
               >
                 {Object.keys(supportedLanguages).map((key) => (
