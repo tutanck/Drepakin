@@ -1,15 +1,16 @@
 import post1_en from './the-drepakin-project.md';
 import post2_en from './about-sickle-cell-disease.md';
+import post3_en from './drepakin-app-how-it-works.md';
 import scd from '../../../assets/scd.jpg';
 
 export default {
   /* Headlines */
   head: {
     id: 3689,
-    date: 'June 19, 2020',
+    date: 'June 01, 2020',
     title: 'The Drepakin project',
     description:
-      'The Drepakin project aims to help patients with sickle cell anemia to access the best possible care anywhere in the world.',
+      'The Drepakin project aims to help patients with sickle cell anemia to access the best care anywhere in the world.',
     content: post1_en,
     image: scd,
     imageText: 'Sickle Cells',
@@ -18,16 +19,24 @@ export default {
   /* NEWS */
   news: [
     {
+      id: 3690,
+      date: 'June 01, 2020',
+      title: 'The Drepakin App: How it works ?',
+      description:
+        'The Drepakin app helps you find health centers that are experts in sickle cell disease. You can search for expert centers in a country, city or near an address. You can also rate and leave a review on each health center.',
+      content: post3_en,
+    },
+    {
       id: 3689,
-      date: 'June 19, 2020',
+      date: 'June 01, 2020',
       title: 'The Drepakin project',
       description:
-        'The Drepakin project aims to help patients with sickle cell anemia to access the best possible care anywhere in the world.',
+        'The Drepakin project aims to help patients with sickle cell anemia to access the best care anywhere in the world.',
       content: post1_en,
     },
     {
       id: 3688,
-      date: 'May 11, 2020',
+      date: 'May 31, 2020',
       title:
         'Sickle Cell Disease - The most common genetic disease in the world',
       description:

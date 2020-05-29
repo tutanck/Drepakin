@@ -1,12 +1,10 @@
-# The Drepakin project
+# The Drepakin App: How it works ?
 
 #### June 01, 2020 by Joan
 
-The Drepakin project aims to help patients with sickle cell anemia to access the best care anywhere in the world.
-
-## The Drepakin app
-
 _[The Drepakin app](https://drepakin.com/app)_ helps you **find health centers that are experts in sickle cell disease**. You can **search** for expert centers in a country, city or near an address. You can also **rate** and **leave a review** on each health center. [Go to The App.](Https://drepakin.com/app)
+
+## How it works ?
 
 ## Help us help you
 
