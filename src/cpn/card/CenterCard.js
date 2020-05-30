@@ -671,7 +671,12 @@ export default function CenterCard({
           <Typography paragraph>
             <b>{lang.consultation_managers} : </b>
             <br />
-            {consultation_managers}
+            {consultation_managers.map((manager) => (
+              <span key={manager}>
+                {manager}
+                <br />
+              </span>
+            ))}
           </Typography>
         </CardContent>
       </Collapse>
