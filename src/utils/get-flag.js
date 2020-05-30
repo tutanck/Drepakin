@@ -25,7 +25,7 @@ import SE from '../static/assets/flags/SE.png';
 import SK from '../static/assets/flags/SK.png';
 import TR from '../static/assets/flags/TR.png';
 
-const getFlag = countryCode => {
+const getFlag = (countryCode) => {
   switch (countryCode) {
     case 'AT':
       return AT;
@@ -47,8 +47,15 @@ const getFlag = countryCode => {
       return ES;
     case 'FI':
       return FI;
+
+    case 'GF':
+    case 'GP':
+    case 'MQ':
+    case 'YT':
+    case 'RE':
     case 'FR':
       return FR;
+
     case 'GB':
       return GB;
     case 'HU':
