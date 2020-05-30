@@ -283,18 +283,18 @@ export default function StickyFooter({ lang, language }) {
               <FontAwesomeIcon size="3x" icon={faFacebook} />
             </a> */}
 
-            <a
+            {/* <a
               className={clsx(classes.socialNetworkIcon, classes.whatsapp)}
               href="https://web.whatsapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon size="3x" icon={faWhatsapp} />
-            </a>
+            </a> */}
 
             <a
               className={clsx(classes.socialNetworkIcon, classes.instagram)}
-              href="https://www.instagram.com/explore/tags/drepakin/"
+              href="https://www.instagram.com/drepakin/"
               target="_blank"
               rel="noopener noreferrer"
             >
