@@ -125,13 +125,14 @@ export default function App() {
               }}
             >
               <Switch>
-                <Route
+                {/* Maintenance mode : uncomment to activate */}
+                {/* <Route
                   path="/"
                   component={() => {
                     window.location.href = '/maintenance';
                     return null;
                   }}
-                />
+                /> */}
 
                 <Route exact path="/">
                   <Blog
