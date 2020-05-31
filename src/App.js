@@ -9,7 +9,7 @@ import {
   Select,
   MenuItem,
 } from '@material-ui/core';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { grey } from '@material-ui/core/colors';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { AppContextProvider } from './context/AppContext';
@@ -125,15 +125,6 @@ export default function App() {
               }}
             >
               <Switch>
-                {/* Maintenance mode : uncomment to activate */}
-                {/* <Route
-                  path="/"
-                  component={() => {
-                    window.location.href = '/maintenance';
-                    return null;
-                  }}
-                /> */}
-
                 <Route exact path="/">
                   <Blog
                     lang={lang}
@@ -151,6 +142,15 @@ export default function App() {
                     updateLanguage={updateLanguage}
                   />
                 </Route>
+
+                <Route
+                  path="/"
+                  component={() => {
+                    window.location.href = '/maintenance';
+                    return null;
+                  }}
+                />
+
                 <Route path="/app">
                   {window.navigator.onLine ? (
                     <MainPage
