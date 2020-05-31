@@ -145,13 +145,13 @@ export default function App() {
                   />
                 </Route>
 
-                <Route
+                {/* <Route
                   path="/"
                   component={() => {
                     window.location.href = '/maintenance';
                     return null;
                   }}
-                />
+                /> */}
 
                 <Route path="/app">
                   {window.navigator.onLine ? (
