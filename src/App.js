@@ -9,7 +9,7 @@ import {
   Select,
   MenuItem,
 } from '@material-ui/core';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { grey } from '@material-ui/core/colors';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { AppContextProvider } from './context/AppContext';
@@ -125,6 +125,14 @@ export default function App() {
               }}
             >
               <Switch>
+                <Route
+                  path="/"
+                  component={() => {
+                    window.location.href = '/maintenance';
+                    return null;
+                  }}
+                />
+
                 <Route exact path="/">
                   <Blog
                     lang={lang}
@@ -132,11 +140,9 @@ export default function App() {
                     updateLanguage={updateLanguage}
                   />
                 </Route>
-
                 <Route path="/blog/:row/:slug">
                   <BlogPost language={language} />
                 </Route>
-
                 <Route path="/blog">
                   <Blog
                     lang={lang}
@@ -144,7 +150,6 @@ export default function App() {
                     updateLanguage={updateLanguage}
                   />
                 </Route>
-
                 <Route path="/app">
                   {window.navigator.onLine ? (
                     <MainPage
@@ -178,11 +183,9 @@ export default function App() {
                     </Container>
                   )}
                 </Route>
-
                 <Route path="/404">
                   <NotFound lang={lang} language={language} />
                 </Route>
-
                 <Route>
                   <NotFound lang={lang} language={language} />
                 </Route>

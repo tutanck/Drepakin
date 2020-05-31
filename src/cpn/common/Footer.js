@@ -10,8 +10,8 @@ import { lightBlue } from '@material-ui/core/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   /* faFacebook, */
+  /* faWhatsapp, */
   faInstagram,
-  faWhatsapp,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import Z from '../../static/assets/Z.png';
