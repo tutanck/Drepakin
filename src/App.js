@@ -132,9 +132,11 @@ export default function App() {
                     updateLanguage={updateLanguage}
                   />
                 </Route>
+
                 <Route path="/blog/:row/:slug">
                   <BlogPost language={language} />
                 </Route>
+
                 <Route path="/blog">
                   <Blog
                     lang={lang}
