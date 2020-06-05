@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   CssBaseline,
@@ -95,14 +95,17 @@ export default function App() {
 
   const query = new URLSearchParams(search);
 
-  const lng = query.get('lng');
+  const urlLang = query.get('lang');
 
-  const [language, setLanguage] = useState(selectedLanguage(lng));
+  const [language, setLanguage] = useState(selectedLanguage(urlLang));
 
   const updateLanguage = (currentLanguage) => {
-    storePreferredLanguage(currentLanguage);
     setLanguage(currentLanguage);
   };
+
+  useEffect(() => {
+    storePreferredLanguage(language);
+  }, [language]);
 
   const lang = langs[language];
 
