@@ -9,18 +9,15 @@ import {
   Select,
   MenuItem,
 } from '@material-ui/core';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import { grey } from '@material-ui/core/colors';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { AppContextProvider } from './context/AppContext';
 import { theme } from './utils/app-identity';
 import { loadStoredUser, storeUser } from './utils/auth-service';
-import {
-  loadPreferredLanguage,
-  storePreferredLanguage,
-} from './utils/preferred-language';
+import { storePreferredLanguage } from './utils/preferred-language';
 import supportedLanguages, {
-  defaultLanguage,
+  selectedLanguage,
 } from './utils/supported-languages';
 import langs from './static/resources/langs';
 import SnackBar from './cpn/bar/SnackBar';
@@ -94,9 +91,13 @@ export default function App() {
     setUser(currentUser);
   };
 
-  const [language, setLanguage] = useState(
-    loadPreferredLanguage() || defaultLanguage,
-  );
+  const { search } = useLocation();
+
+  const query = new URLSearchParams(search);
+
+  const lng = query.get('lng');
+
+  const [language, setLanguage] = useState(selectedLanguage(lng));
 
   const updateLanguage = (currentLanguage) => {
     storePreferredLanguage(currentLanguage);
@@ -145,6 +146,7 @@ export default function App() {
                   />
                 </Route>
 
+                {/* MAITENANCE PAGE */}
                 {/* <Route
                   path="/"
                   component={() => {
