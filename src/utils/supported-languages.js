@@ -1,4 +1,7 @@
-import { loadPreferredLanguage } from './preferred-language';
+import {
+  loadPreferredLanguage,
+  storePreferredLanguage,
+} from './preferred-language';
 
 const supportedLanguages = {
   fr_FR: { key: 'fr_FR', local: 'fr-FR', name: 'Français', display: 'Fr' },
@@ -9,6 +12,7 @@ const defaultLanguage = 'fr_FR';
 
 const selectedLanguage = (lng) => {
   if (supportedLanguages[lng]) {
+    storePreferredLanguage(lng);
     return lng;
   }
 
