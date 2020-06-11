@@ -2,7 +2,7 @@
 
 #### 01 Juin 2020 par Joan
 
-Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à à accéder aux meilleurs soins partout dans le monde.
+Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à accéder aux meilleurs soins partout dans le monde.
 
 ## L'application Drepakin
 
