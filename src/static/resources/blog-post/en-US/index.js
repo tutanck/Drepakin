@@ -10,7 +10,7 @@ export default {
     date: 'June 01, 2020',
     title: 'The Drepakin project',
     description:
-      'The Drepakin project aims to help patients with sickle cell anemia to access the best care anywhere in the world.',
+      'The Drepakin project aims to help patients with sickle cell anemia to find the best care anywhere in the world.',
     content: post1_en,
     image: scd,
     imageText: 'Sickle Cells',
@@ -31,7 +31,7 @@ export default {
       date: 'June 01, 2020',
       title: 'The Drepakin project',
       description:
-        'The Drepakin project aims to help patients with sickle cell anemia to access the best care anywhere in the world.',
+        'The Drepakin project aims to help patients with sickle cell anemia to find the best care anywhere in the world.',
       content: post1_en,
     },
     {
