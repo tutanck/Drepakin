@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Help sickle cell patients find nearby specialist hospitals.
+> Help sickle cell patients find nearby specialist hospitals
 
 ### ✨ [drepakin.com](https://drepakin.com/)
 
