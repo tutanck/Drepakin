@@ -10,7 +10,7 @@ export default {
     date: '19 Juin 2020',
     title: 'Le projet Drepakin',
     description:
-      "Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à trouver les meilleurs soins partout dans le monde.",
+      "Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à accéder aux meilleurs soins partout dans le monde.",
     content: post1_fr,
     image: scd,
     imageText: 'Sickle Cells',
@@ -31,7 +31,7 @@ export default {
       date: '01 Juin 2020',
       title: 'Le projet Drepakin',
       description:
-        "Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à trouver les meilleurs soins partout dans le monde.",
+        "Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocytose à accéder aux meilleurs soins partout dans le monde.",
       content: post1_fr,
     },
     {

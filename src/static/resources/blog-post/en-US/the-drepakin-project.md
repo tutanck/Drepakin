@@ -2,7 +2,7 @@
 
 #### June 01, 2020 by Joan
 
-The Drepakin project aims to help patients with sickle cell anemia to find the best care anywhere in the world.
+The Drepakin project aims to help patients with sickle cell anemia to access the best care anywhere in the world.
 
 ## The Drepakin app
 
