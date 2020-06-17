@@ -138,8 +138,6 @@ export default function MainPage({
   }
 
   const askForCurrentPlace = async () => {
-    setIsLoadingCenters(true);
-
     try {
       const position = await getLocation();
 
