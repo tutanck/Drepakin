@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button, Fab, Hidden } from '@material-ui/core';
+import { grey } from '@material-ui/core/colors';
+import { Grid, Button, Fab, Hidden, Typography } from '@material-ui/core';
 import { Edit, People } from '@material-ui/icons';
 import EditorDialog from '../cpn/dialog/EditorDialog';
 import UsersDialog from '../cpn/dialog/UsersDialog';
@@ -65,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
   homeBtn: {
     alignSelf: 'flex-start',
     margin: 16,
+  },
+  text: {
+    fontSize: 32,
+    color: grey[600],
   },
 }));
 
@@ -275,7 +280,7 @@ export default function MainPage({
             </div>
           </Hidden>
         )}
-        {centers.length > 0 && (
+        {centers.length > 0 ? (
           <Grid container spacing={3}>
             <Grid item xs={12} key={'primeIndication'}>
               <span className={classes.primeIndication}>
@@ -361,6 +366,15 @@ export default function MainPage({
               </Button>
             </Grid>
           </Grid>
+        ) : (
+          <Typography
+            gutterBottom
+            variant="h6"
+            component="h5"
+            className={classes.text}
+          >
+            {lang.start_a_saerch}
+          </Typography>
         )}
       </div>
     </div>
