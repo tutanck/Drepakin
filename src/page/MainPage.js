@@ -93,6 +93,7 @@ export default function MainPage({
 
   const [isLegendDialogOpen, setIsLegendDialogOpen] = useState(false);
   const [isLoadingCenters, setIsLoadingCenters] = useState(false);
+  const [isAskingForLocation, setIsAskingForLocation] = useState(false);
 
   const onServerCallError = onServerError({
     onUnauthorized: () => {
@@ -143,6 +144,8 @@ export default function MainPage({
   }
 
   const askForCurrentPlace = async () => {
+    setIsAskingForLocation(true);
+
     try {
       const position = await getLocation();
 
@@ -153,6 +156,8 @@ export default function MainPage({
     } catch (err) {
       console.error('getLocation err', err);
       return snack.warning(lang.allow_geolocation);
+    } finally {
+      setIsAskingForLocation(false);
     }
   };
 
@@ -196,6 +201,8 @@ export default function MainPage({
       />
 
       <LoaderDialog open={isLoadingCenters} />
+
+      <LoaderDialog open={isAskingForLocation} progressColor='primary'/>
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
         <Button
