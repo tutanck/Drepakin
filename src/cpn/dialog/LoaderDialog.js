@@ -4,19 +4,23 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CircularProgress, Backdrop } from '@material-ui/core';
 import { noOp } from '../../utils/toolbox';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: '#fff',
   },
 }));
 
-export default function LoaderDialog({ open, onClose = noOp }) {
+export default function LoaderDialog({
+  open,
+  onClose = noOp,
+  progressColor = 'inherit',
+}) {
   const classes = useStyles();
 
   return (
     <Backdrop className={classes.backdrop} open={open} onClick={onClose}>
-      <CircularProgress color="inherit" />
+      <CircularProgress color={progressColor} />
     </Backdrop>
   );
 }
