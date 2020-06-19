@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import './style.css';
+import { amber, blue, red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,7 +11,12 @@ const useStyles = makeStyles((theme) => ({
   },
   homeBtn: {
     fontWeight: 'bold',
+    textDecoration: 'none',
   },
+  red: {
+    color: red[400],
+  },
+  p: { fontWeight: 'bold', fontSize: 24, color: blue[600] },
 }));
 
 export default function NotFound({ lang }) {
@@ -20,12 +26,14 @@ export default function NotFound({ lang }) {
     <div className={classes.root}>
       <div className="notfound">
         <div className="notfound-404">
-          <h1>Oops!</h1>
+          <h1>#WSCD</h1>
         </div>
 
-        <h2>404 - {lang.page_not_found}</h2>
+        <h3 className={classes.red}>June 19</h3>
 
-        <p>{lang.page_not_found_explanation}</p>
+        <h3 className={classes.red}>World Sickle Cell Day</h3>
+
+        <h6 className={classes.p}>Spread the word around you !</h6>
 
         <Button
           href="/"
@@ -33,7 +41,7 @@ export default function NotFound({ lang }) {
           color="secondary"
           className={classes.homeBtn}
         >
-          {lang.go_to_homepage}
+          @drepakin
         </Button>
       </div>
     </div>
