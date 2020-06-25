@@ -289,7 +289,7 @@ export default function CenterCard({
             </Typography>
           )}
 
-          {average_rate && (
+          {/* {average_rate && (
             <>
               <div className={classes.divider}> &bull; </div>
               <Typography
@@ -306,7 +306,7 @@ export default function CenterCard({
                 {rates_count} {lang.opinion}
               </Typography>
             </>
-          )}
+          )} */}
         </div>
 
         <div className={classes.quickInfos}>
@@ -432,7 +432,7 @@ export default function CenterCard({
             </Tooltip>
           </Link>
 
-          <RaterDialog
+          {/*  <RaterDialog
             centerId={_id}
             onRateSubmit={updateCard}
             prevRate={user_rate}
@@ -447,7 +447,7 @@ export default function CenterCard({
                 </span>
               </Tooltip>
             )}
-          </RaterDialog>
+          </RaterDialog> */}
 
           <CommentsDialog centerId={_id} onCommentSubmit={updateCard}>
             {(props) => (
