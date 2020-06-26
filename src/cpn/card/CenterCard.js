@@ -4,18 +4,18 @@ import clsx from 'clsx';
 import { get, put } from '../../utils/api-client';
 import { grey } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
-import StarIcon from '@material-ui/icons/Star';
+/* import StarIcon from '@material-ui/icons/Star'; */
 import PersonIcon from '@material-ui/icons/Person';
 import SearchIcon from '@material-ui/icons/Search';
 import ChildCareIcon from '@material-ui/icons/ChildCare';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import RaterDialog from '../dialog/RaterDialog';
-import CommentsDialog from '../dialog/CommentsDialog';
+/* import RaterDialog from '../dialog/RaterDialog';
+ */ import CommentsDialog from '../dialog/CommentsDialog';
 import EditorDialog from '../dialog/EditorDialog';
 import LocatorDialog from '../dialog/LocatorDialog';
 import CenterSchema from '../../validation/CensterSchema';
-import { evaluate } from '../../utils/rate-evaluation';
-import { getFlag } from '../../utils/get-flag';
+/* import { evaluate } from '../../utils/rate-evaluation';
+ */ import { getFlag } from '../../utils/get-flag';
 import supportedLanguages from '../../utils/supported-languages';
 import { countries } from '../../static/resources/geo';
 import ERN from '../../static/assets/ERN.png';
@@ -46,7 +46,7 @@ import {
   Call,
   Room,
   OpenInNew,
-  Grade,
+  /* Grade, */
   Comment,
   Report,
   Edit,
@@ -196,10 +196,10 @@ export default function CenterCard({
       ern_member,
       specialized_consultation,
       officially_designated_center,
-      average_rate,
+      /* average_rate,
       user_rate,
+      rates_count, */
       comments_count,
-      rates_count,
       dist,
       meta: {
         place: { countryCode, extra },
