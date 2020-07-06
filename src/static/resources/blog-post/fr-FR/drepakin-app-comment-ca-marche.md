@@ -6,7 +6,7 @@ _[L'application Drepakin](https://drepakin.com/app)_ t'aide à **trouver des cen
 
 Par défaut l'application te propose les centres les plus proches de ta position. Mais lorsque tu lances une recherche, l'application va retrouver les centres les plus proches du lieu que tu as recherché. Tu peux **rechercher** les centres experts d'un pays, d'une ville ou à proximité d'une adresse. Pratique lorsque tu es en déplacement.
 
-Tu peux également **noter** et **laisser un avis** sur chaque centre de santé.
+Tu peux également **laisser un avis** sur chaque centre de santé.
 
 ## Comment ça marche ?
 
@@ -14,7 +14,7 @@ Tu peux également **noter** et **laisser un avis** sur chaque centre de santé.
 
 2. Une fois approuvés, les centres de santé seront visibles sur l'application 🎉🎉🎉.
 
-3. Tu pourras alors **donner une note et laisser un avis sur les centres que tu as l'habitude de fréquenter**. Cela rassurera les autres patients sur la qualité de la prise en charge dans un centre.
+3. Tu pourras alors **laisser un avis sur les centres que tu as l'habitude de fréquenter**. Cela rassurera les autres patients sur la qualité de la prise en charge dans un centre.
 
 ## Tu ne trouves pas un centre sur Drepakin ?
 
