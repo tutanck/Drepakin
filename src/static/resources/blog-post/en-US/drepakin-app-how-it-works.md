@@ -6,7 +6,7 @@ _[The Drepakin app](https://drepakin.com/app)_ helps you **find health centers e
 
 By default, the application shows you the centers closest to your position. But when you start a search, the application will find the centers closest to the place you searched. You can **search** for expert centers in a country, city or near an address. Convenient when you're on the go.
 
-You can also **rate** and **leave a review** on each health center.
+You can also **leave a review** on each health center.
 
 ## How it works ?
 
@@ -14,7 +14,7 @@ You can also **rate** and **leave a review** on each health center.
 
 2. Once approved, the health centers will be visible on the application 🎉🎉🎉.
 
-3. You can then **give a rating and leave an opinion on the centers you are used to**. This will reassure other patients about the quality of care in a center.
+3. You can then **leave an opinion on the centers you are used to**. This will reassure other patients about the quality of care in a center.
 
 ## Can't you find a center on Drepakin ?
 

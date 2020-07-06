@@ -6,7 +6,7 @@ Le projet Drepakin a pour ambition d'aider les patients atteints de drépanocyto
 
 ## L'application Drepakin
 
-_[L'application Drepakin](https://drepakin.com/app)_ vous aide à **trouver des centres de santé experts de la drépanocytose**. Vous pouvez **rechercher** les centres experts d'un pays, d'une ville ou à proximité d'une adresse. Vous pouvez également **noter** et **laisser un avis** sur chaque centre de santé. [Aller à L'App.](https://drepakin.com/app)
+_[L'application Drepakin](https://drepakin.com/app)_ vous aide à **trouver des centres de santé experts de la drépanocytose**. Vous pouvez **rechercher** les centres experts d'un pays, d'une ville ou à proximité d'une adresse. Vous pouvez également **laisser un avis** sur chaque centre de santé. [Aller à L'App.](https://drepakin.com/app)
 
 ## Aidez-nous à vous aider
 
