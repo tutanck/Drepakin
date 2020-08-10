@@ -236,7 +236,7 @@ export default function CenterCard({
   }
 
   return (
-    <Card className={classes.card} onClick={() => setExpanded(!expanded)}>
+    <Card className={classes.card}>
       <CardHeader
         title={hospital}
         subheader={
@@ -255,6 +255,18 @@ export default function CenterCard({
               alt="flag"
             />
           </Avatar>
+        }
+        action={
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-label={lang.show_more}
+          >
+            <ExpandMore />
+          </IconButton>
         }
       />
 
@@ -432,22 +444,22 @@ export default function CenterCard({
             </Tooltip>
           </Link>
 
-          {/*  <RaterDialog
-            centerId={_id}
-            onRateSubmit={updateCard}
-            prevRate={user_rate}
+          <Link
+            target="_blank"
+            className={classes.innerLink}
+            href={`http://www.google.com/search?q=${hospital}`}
           >
-            {(props) => (
-              <Tooltip title={lang.rate}>
-                <span>
-                  <IconButton {...props} color="primary" aria-label={lang.rate}>
-                    <Grade />
-                    <span className={classes.iconButtonText}>{user_rate}</span>
-                  </IconButton>
-                </span>
-              </Tooltip>
-            )}
-          </RaterDialog> */}
+            <Tooltip title={lang.search_hospital_on_google}>
+              <span>
+                <IconButton
+                  color="primary"
+                  aria-label={lang.search_hospital_on_google}
+                >
+                  <SearchIcon />
+                </IconButton>
+              </span>
+            </Tooltip>
+          </Link>
 
           <CommentsDialog centerId={_id} onCommentSubmit={updateCard}>
             {(props) => (
@@ -467,6 +479,23 @@ export default function CenterCard({
               </Tooltip>
             )}
           </CommentsDialog>
+
+          {/*  <RaterDialog
+            centerId={_id}
+            onRateSubmit={updateCard}
+            prevRate={user_rate}
+          >
+            {(props) => (
+              <Tooltip title={lang.rate}>
+                <span>
+                  <IconButton {...props} color="primary" aria-label={lang.rate}>
+                    <Grade />
+                    <span className={classes.iconButtonText}>{user_rate}</span>
+                  </IconButton>
+                </span>
+              </Tooltip>
+            )}
+          </RaterDialog> */}
 
           {user && user.is_admin && (
             <Hidden xsDown>
@@ -546,29 +575,6 @@ export default function CenterCard({
             <Link
               target="_blank"
               className={classes.innerLink}
-              href={`http://www.google.com/search?q=${hospital}`}
-            >
-              <Tooltip title={lang.search_hospital_on_google}>
-                <span>
-                  <MenuItem key={'search'} onClick={() => handleCloseMenu()}>
-                    <ListItemIcon>
-                      <IconButton
-                        color="primary"
-                        aria-label={lang.search_hospital_on_google}
-                      >
-                        <SearchIcon />
-                      </IconButton>
-                    </ListItemIcon>
-                    <Typography variant="inherit">
-                      {lang.search_on_google}
-                    </Typography>
-                  </MenuItem>
-                </span>
-              </Tooltip>
-            </Link>
-            <Link
-              target="_blank"
-              className={classes.innerLink}
               href={`mailto:drepakin@gmail.com?subject=[EC_${_id}] ${lang.report_error_on_this_center} (${name})`}
             >
               <Tooltip title={lang.report_error_on_this_center}>
@@ -589,45 +595,7 @@ export default function CenterCard({
                 </span>
               </Tooltip>
             </Link>
-            <Hidden smUp>
-              <MenuItem
-                key={'expand'}
-                onClick={() => {
-                  setExpanded(!expanded);
-                  handleCloseMenu();
-                }}
-              >
-                <ListItemIcon>
-                  <IconButton
-                    color="primary"
-                    className={clsx(classes.expandNoMargin, {
-                      [classes.expandOpen]: expanded,
-                    })}
-                    aria-expanded={expanded}
-                    aria-label="show more"
-                  >
-                    <ExpandMore />
-                  </IconButton>
-                </ListItemIcon>
-                <Typography variant="inherit">
-                  {expanded ? lang.collapse_card : lang.expand_card}
-                </Typography>
-              </MenuItem>
-            </Hidden>
           </Menu>
-
-          <Hidden xsDown>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={() => setExpanded(!expanded)}
-              aria-expanded={expanded}
-              aria-label={lang.show_more}
-            >
-              <ExpandMore />
-            </IconButton>
-          </Hidden>
         </CardActions>
       </CardContent>
 
