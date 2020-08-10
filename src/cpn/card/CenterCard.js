@@ -236,7 +236,7 @@ export default function CenterCard({
   }
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} onClick={() => setExpanded(!expanded)}>
       <CardHeader
         title={hospital}
         subheader={
