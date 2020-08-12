@@ -19,14 +19,6 @@ export default {
   /* LES NOUVELLES D'ACTUALITE */
   news: [
     {
-      id: 3690,
-      date: '01 Juin 2020',
-      title: "L'application Drepakin: Comment ça marche ?",
-      description:
-        "L'application Drepakin vous aide à trouver des centres de santé experts de la drépanocytose.",
-      content: post3_fr,
-    },
-    {
       id: 3689,
       date: '01 Juin 2020',
       title: 'Le projet Drepakin',
@@ -48,5 +40,15 @@ export default {
   /* INFORMATIONS OBSOLETES */
   archives: [
     /* Please move old posts HERE */
+  ],
+  trash: [
+    {
+      id: 3690,
+      date: '01 Juin 2020',
+      title: "L'application Drepakin: Comment ça marche ?",
+      description:
+        "L'application Drepakin vous aide à trouver des centres de santé experts de la drépanocytose.",
+      content: post3_fr,
+    },
   ],
 };
