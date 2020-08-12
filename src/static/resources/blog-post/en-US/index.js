@@ -19,14 +19,6 @@ export default {
   /* NEWS */
   news: [
     {
-      id: 3690,
-      date: 'June 01, 2020',
-      title: 'The Drepakin App: How it works ?',
-      description:
-        'The Drepakin app helps you find health centers that are experts in sickle cell disease.',
-      content: post3_en,
-    },
-    {
       id: 3689,
       date: 'June 01, 2020',
       title: 'The Drepakin project',
@@ -48,5 +40,15 @@ export default {
   /* OUTDATED INFORMATION */
   archives: [
     /* Please move old posts HERE */
+  ],
+  trash: [
+    {
+      id: 3690,
+      date: 'June 01, 2020',
+      title: 'The Drepakin App: How it works ?',
+      description:
+        'The Drepakin app helps you find health centers that are experts in sickle cell disease.',
+      content: post3_en,
+    },
   ],
 };
