@@ -30,9 +30,9 @@ export default {
       id: 3688,
       date: '31 Mai 2020',
       title:
-        'La drépanocytose - La maladie génétique la plus répandue dans le monde',
+        'La drépanocytose - La maladie génétique la plus répandue au monde',
       description:
-        "La drépanocytose également connue sous le nom d'anémie falciforme est une maladie génétique héréditaire qui affecte l'hémoglobine dans les globules rouges.",
+        'La drépanocytose est une maladie génétique héréditaire qui affecte les globules rouges.',
       content: post2_fr,
     },
   ],

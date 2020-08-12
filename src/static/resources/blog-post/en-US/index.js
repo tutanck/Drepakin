@@ -32,7 +32,7 @@ export default {
       title:
         'Sickle Cell Disease - The most common genetic disease in the world',
       description:
-        'Sickle Cell Disease also known as sickle cell anemia is an inherited genetic disorder that affects the hemoglobin in red blood cells.',
+        'Sickle Cell Disease is an inherited genetic disorder that affects red blood cells.',
       content: post2_en,
     },
   ],
