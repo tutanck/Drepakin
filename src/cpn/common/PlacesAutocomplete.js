@@ -7,7 +7,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
 import { createAutomplete } from '../../utils/google-places';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -75,7 +75,7 @@ export default function PlacesAutocomplete({
   const [inputValue, setInputValue] = useState(inputDefaultValue);
   const [isPlaceSettled, setIsPlaceSettled] = useState(false);
 
-  const handleInputChange = inputValue => {
+  const handleInputChange = (inputValue) => {
     setInputValue(inputValue);
 
     if (isPlaceSettled && !(inputValue && inputValue.length > 0)) {
@@ -97,6 +97,7 @@ export default function PlacesAutocomplete({
     if (autocomplete) {
       autocomplete.addListener('place_changed', () => {
         const place = autocomplete.getPlace();
+        alert(`place_changed ${JSON.stringify(place)}`);
 
         if (place && place.place_id) {
           setInputValue(place.formatted_address);
@@ -107,7 +108,7 @@ export default function PlacesAutocomplete({
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, onPlaceChanged]);
+  }, [id]);
 
   return (
     <div className={classes.search}>
@@ -116,7 +117,7 @@ export default function PlacesAutocomplete({
       </div>
       <InputBase
         id={id}
-        onChange={e => handleInputChange(e.target.value)}
+        onChange={(e) => handleInputChange(e.target.value)}
         value={inputValue}
         {...inputBaseProps}
         inputProps={inputProps}
