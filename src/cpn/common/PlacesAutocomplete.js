@@ -68,6 +68,7 @@ export default function PlacesAutocomplete({
   inputProps,
   inputBaseProps,
   onPlaceChanged,
+  onUnknownPlace,
   inputDefaultValue = '',
 }) {
   const classes = useStyles();
@@ -97,14 +98,15 @@ export default function PlacesAutocomplete({
     if (autocomplete) {
       autocomplete.addListener('place_changed', () => {
         const place = autocomplete.getPlace();
-        alert(`place_changed ${JSON.stringify(place)}`);
 
         if (place && place.place_id) {
           setInputValue(place.formatted_address);
-        }
 
-        onPlaceChanged(place);
-        setIsPlaceSettled(true);
+          onPlaceChanged(place);
+          setIsPlaceSettled(true);
+        } else {
+          onUnknownPlace(place);
+        }
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
