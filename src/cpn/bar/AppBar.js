@@ -32,6 +32,7 @@ export default function MainAppBar({
   name,
   updateLanguage,
   onPlaceChanged,
+  onUnknownPlace,
 }) {
   const classes = useStyles();
 
@@ -59,6 +60,7 @@ export default function MainAppBar({
           <PlacesAutocomplete
             lang={lang}
             id="app-bar-places-autocomplete"
+            onUnknownPlace={onUnknownPlace}
             onPlaceChanged={(place) => onPlaceChanged(place)}
             inputProps={{ 'aria-label': 'search places' }}
             inputBaseProps={{

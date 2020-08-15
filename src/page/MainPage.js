@@ -170,6 +170,10 @@ export default function MainPage({
     await askForCurrentPlace();
   };
 
+  const handleUnknownPlace = async ({ name }) => {
+    snack.error(`${lang.unknown_place} '${name}'. ${lang.select_place_on_list}`);
+  };
+
   useEffect(
     () => {
       askForCurrentPlace();
@@ -198,11 +202,12 @@ export default function MainPage({
         language={language}
         updateLanguage={updateLanguage}
         onPlaceChanged={handlePlaceChanged}
+        onUnknownPlace={handleUnknownPlace}
       />
 
       <LoaderDialog open={isLoadingCenters} />
 
-      <LoaderDialog open={isAskingForLocation} progressColor='primary'/>
+      <LoaderDialog open={isAskingForLocation} progressColor="primary" />
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
         <Button

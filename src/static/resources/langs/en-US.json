@@ -141,5 +141,7 @@
   "page_not_found": "Page not found",
   "page_not_found_explanation": "The page you are looking for might have been removed, had its name changed or is temporarily unavailable.",
   "go_to_homepage": "Go To Homepage",
-  "start_a_saerch": "Perform a search to see results appear."
+  "start_a_saerch": "Perform a search to see results appear.",
+  "unknown_place": "Unknown Place",
+  "select_place_on_list": "Please select a place on the list."
 }

@@ -141,5 +141,7 @@
   "page_not_found": "Page non trouvée",
   "page_not_found_explanation": "La page que vous recherchez a peut-être été supprimée, a changé de nom ou est temporairement indisponible.",
   "go_to_homepage": "Aller à l'accueil",
-  "start_a_saerch": "Effectuez une recherche pour voir les résultats apparaître."
+  "start_a_saerch": "Effectuez une recherche pour voir les résultats apparaître.",
+  "unknown_place": "Lieu inconnu",
+  "select_place_on_list": "Veuillez sélectionner un lieu dans la liste."
 }
