@@ -162,7 +162,6 @@ export default function MainPage({
   };
 
   const handlePlaceChanged = async (rawPlace) => {
-    alert(JSON.stringify(rawPlace));
     if (rawPlace) {
       const place = getPlaceFromGoogle(rawPlace);
       if (place) return setPlace(place);
