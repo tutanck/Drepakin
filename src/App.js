@@ -150,13 +150,15 @@ export default function App() {
                 </Route>
 
                 {/* MAITENANCE PAGE */}
-                {/* <Route
-                  path="/"
-                  component={() => {
-                    window.location.href = '/maintenance';
-                    return null;
-                  }}
-                /> */}
+                {
+                  <Route
+                    path="/"
+                    component={() => {
+                      window.location.href = '/maintenance';
+                      return null;
+                    }}
+                  />
+                }
 
                 <Route path="/app">
                   {window.navigator.onLine ? (
