@@ -107,9 +107,8 @@ export default function MainPage({
     onInternalServerError: () => snack.error(lang.an_error_occured),
 
     onBadRequest: (err) => {
-      const responseDataErrorMessageErrors = getResponseDataErrorMessageErrors(
-        err,
-      );
+      const responseDataErrorMessageErrors =
+        getResponseDataErrorMessageErrors(err);
       const firstError = pop(responseDataErrorMessageErrors);
       snack.error(
         lang.field + " '" + firstError.param + "' " + lang.is_invalid,
@@ -171,7 +170,9 @@ export default function MainPage({
   };
 
   const handleUnknownPlace = async ({ name }) => {
-    snack.error(`${lang.unknown_place} '${name}'. ${lang.select_place_on_list}`);
+    snack.error(
+      `${lang.unknown_place} '${name}'. ${lang.select_place_on_list}`,
+    );
   };
 
   useEffect(
@@ -210,15 +211,6 @@ export default function MainPage({
       <LoaderDialog open={isAskingForLocation} progressColor="primary" />
 
       <div className={classes.main} ref={(el) => setCentersGrid(el)}>
-        <Button
-          href="/"
-          size="small"
-          color="primary"
-          className={classes.homeBtn}
-        >
-          {lang.home}
-        </Button>
-
         {user && user.is_admin && (
           <Hidden xsDown>
             <div className={classes.adminDialogsContainer}>

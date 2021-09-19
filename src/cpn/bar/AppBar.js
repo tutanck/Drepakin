@@ -17,9 +17,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  title: {
+  titleWrapper: {
     flexGrow: 1,
     display: 'block',
+  },
+  title: {
+    color: 'inherit',
+    textDecoration: 'none',
+    '&:visited': {
+      color: 'inherit',
+      textDecoration: 'none',
+    },
   },
   select: {
     color: '#C8C8C8',
@@ -40,8 +48,16 @@ export default function MainAppBar({
     <div className={classes.root}>
       <AppBar position="fixed">
         <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            {name} /{' '}
+          <div className={classes.titleWrapper}>
+            <Typography
+              noWrap
+              variant="h6"
+              component="a"
+              href="/"
+              className={classes.title}
+            >
+              {name}/
+            </Typography>
             <FormControl>
               <Select
                 value={language}
@@ -55,7 +71,7 @@ export default function MainAppBar({
                 ))}
               </Select>
             </FormControl>
-          </Typography>
+          </div>
 
           <PlacesAutocomplete
             lang={lang}
