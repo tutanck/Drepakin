@@ -151,13 +151,14 @@ export default function App() {
 
                 {/* MAITENANCE PAGE */}
                 {/* Comment/uncomment to hide/show */}
-                <Route
+                {/* <Route
                   path="/app"
                   component={() => {
                     window.location.href = '/maintenance';
                     return null;
                   }}
                 />
+                */}
 
                 <Route path="/app">
                   {window.navigator.onLine ? (
