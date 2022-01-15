@@ -55,6 +55,6 @@
   "devDependencies": {
     "download": "7.1.0",
     "env-cmd": "10.0.1",
-    "shelljs": "0.8.3"
+    "shelljs": "0.8.5"
   }
 }
